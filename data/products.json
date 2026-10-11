@@ -1,0 +1,79 @@
+{
+  "site": {
+    "name": "Find It Cheaper",
+    "domain": "finditcheaper.co.uk",
+    "tagline": "Trending products in the UK, and where they're cheapest this week.",
+    "tiktok": "https://www.tiktok.com/@taxhype2027",
+    "amazon_tag": "taxhype-21"
+  },
+  "weeks": [
+    {
+      "date": "2026-10-11",
+      "title": "5 things the UK is buying right now",
+      "video": "https://www.tiktok.com/@taxhype2027/video/7695533072627895574",
+      "products": ["heated-throw", "lumie-sunrise-alarm", "karcher-wv1", "medicube-pdrn-balm", "shark-flexstyle"]
+    }
+  ],
+  "products": {
+    "heated-throw": {
+      "name": "Heated throw, 160 x 130cm",
+      "short": "Heated throw",
+      "image": "heated-throw.jpg",
+      "blurb": "The Amazon best seller. Ten heat settings, nine-hour timer, machine washable. A heated throw draws roughly 120 to 160 watts, so an evening on the sofa costs a few pence rather than putting the heating on.",
+      "badge": "4K+ bought this month",
+      "checked": "2026-10-11",
+      "prices": [
+        {"store": "Amazon", "price": 25.49, "was": 29.99, "asin": "B0D8VHSJWN", "note": "Limited time deal"},
+        {"store": "Argos", "price": 60.00, "product": "Silentnight Luxury Heated Throw", "url": "https://www.argos.co.uk/search/silentnight-heated-throw/"},
+        {"store": "Amazon", "price": 45.00, "product": "Silentnight Comfort Control Heated Throw", "asin": "B0FG3D7JFR"}
+      ]
+    },
+    "lumie-sunrise-alarm": {
+      "name": "Lumie Sunrise Alarm",
+      "short": "Lumie Sunrise Alarm",
+      "image": "lumie.jpg",
+      "blurb": "The clocks go back on 25 October. A sunrise alarm brightens gradually for half an hour before the alarm, so you wake up in fake daylight instead of the dark. Lumie is the British brand that started the category.",
+      "badge": "3K+ bought this month",
+      "checked": "2026-10-11",
+      "prices": [
+        {"store": "Amazon", "price": 39.99, "was": 49.99, "asin": "B07GB2MMK5"},
+        {"store": "Argos", "price": 49.00, "url": "https://www.argos.co.uk/search/lumie-sunrise-alarm/"}
+      ]
+    },
+    "karcher-wv1": {
+      "name": "Kärcher WV 1 window vac",
+      "short": "Kärcher window vac",
+      "image": "karcher.jpg",
+      "blurb": "Condensation season. Run it over the inside of the window in the morning and the water goes into the tank instead of down the wall and into the sealant. 20 minutes per charge, which does a whole house.",
+      "badge": "5K+ bought this month",
+      "checked": "2026-10-11",
+      "prices": [
+        {"store": "Amazon", "price": 34.99, "was": 44.99, "asin": "B0CH3JRYX1"},
+        {"store": "Argos", "price": 40.00, "url": "https://www.argos.co.uk/search/karcher-wv1/"}
+      ]
+    },
+    "medicube-pdrn-balm": {
+      "name": "Medicube PDRN Collagen Volume Multi Balm Stick",
+      "short": "Medicube collagen balm",
+      "image": "medicube.jpg",
+      "blurb": "The most-bought skincare product on Amazon UK right now. A balm stick for under-eyes, smile lines, neck and lips. Korean brand, went viral on TikTok in the summer and hasn't slowed down.",
+      "badge": "40K+ bought this month",
+      "checked": "2026-10-11",
+      "prices": [
+        {"store": "Amazon", "price": 16.90, "asin": "B0GHMZXX8Y"}
+      ]
+    },
+    "shark-flexstyle": {
+      "name": "Shark FlexStyle 5-in-1 Air Styler and Hair Dryer",
+      "short": "Shark FlexStyle",
+      "image": "shark.jpg",
+      "blurb": "The Dyson Airwrap alternative. Dries, curls with auto-wrap barrels, and has the oval brush and concentrator. Was £269.99 to £299.99 depending on the kit, and down to £229.99 at both Amazon and Argos.",
+      "badge": "1K+ bought this month",
+      "checked": "2026-10-11",
+      "prices": [
+        {"store": "Amazon", "price": 229.99, "was": 269.99, "asin": "B0FMRYXSQG"},
+        {"store": "Argos", "price": 229.99, "was": 299.99, "url": "https://www.argos.co.uk/search/shark-flexstyle/"}
+      ]
+    }
+  }
+}
