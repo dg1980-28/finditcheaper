@@ -1,0 +1,83 @@
+{
+ "voice": "en-gb-southern_english_female-low",
+ "logo": "video/assets/logo.png",
+ "pad": 0.45,
+ "scenes": [
+  {
+   "type": "hook",
+   "line1": "5 things the UK is buying right now",
+   "line2": "and where they're cheapest",
+   "vo": "Five things the UK is buying right now, and where they're cheapest."
+  },
+  {
+   "type": "product",
+   "num": 1,
+   "name": "Heated throw",
+   "image": "video/assets/heated-throw.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£25.49",
+   "store_alt": "ARGOS (Silentnight)",
+   "price_alt": "£60",
+   "badge": "4K+ bought this month",
+   "note": "Runs for pennies an hour",
+   "vo": "One. A heated throw. Four thousand sold on Amazon this month. Twenty-five quid, runs for pennies an hour. Silentnight's is sixty at Argos."
+  },
+  {
+   "type": "product",
+   "num": 2,
+   "name": "Sunrise alarm clock",
+   "image": "video/assets/lumie.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£39.99",
+   "store_alt": "ARGOS",
+   "price_alt": "£49",
+   "badge": "3K+ bought this month",
+   "note": "Clocks go back 25 October",
+   "vo": "Two. Clocks go back on the twenty-fifth. A sunrise alarm fakes the daylight. Forty pounds on Amazon, forty-nine at Argos."
+  },
+  {
+   "type": "product",
+   "num": 3,
+   "name": "Karcher window vac",
+   "image": "video/assets/karcher.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£34.99",
+   "store_alt": "ARGOS",
+   "price_alt": "£40",
+   "badge": "5K+ bought this month",
+   "note": "Condensation season is here",
+   "vo": "Three. Condensation season. The Karcher window vac. Five thousand sold this month. Thirty-five on Amazon, forty at Argos."
+  },
+  {
+   "type": "product",
+   "num": 4,
+   "name": "Medicube collagen balm",
+   "image": "video/assets/medicube.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£16.90",
+   "badge": "40K+ bought this month",
+   "note": "Most-bought skincare on Amazon UK",
+   "vo": "Four. The most bought skincare on Amazon UK. Medicube's collagen balm. Forty thousand sold this month. Sixteen ninety."
+  },
+  {
+   "type": "product",
+   "num": 5,
+   "name": "Shark FlexStyle",
+   "image": "video/assets/shark.jpg",
+   "store_main": "AMAZON & ARGOS",
+   "price_main": "£229.99",
+   "store_alt": "WAS",
+   "price_alt": "£269.99",
+   "badge": "1K+ bought this month",
+   "note": "Airwrap looks, half the price",
+   "vo": "Five. The Shark FlexStyle. Normally two seventy. Two twenty-nine at Amazon and Argos right now."
+  },
+  {
+   "type": "outro",
+   "line1": "Follow for next week's finds",
+   "line2": "finditcheaper.co.uk",
+   "small": "Prices checked 11 Oct 2026. Contains affiliate links.",
+   "vo": "Follow for next week's finds. Every link is at find it cheaper dot co dot UK."
+  }
+ ]
+}

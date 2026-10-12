@@ -1,0 +1,44 @@
+{
+ "voice": "en-gb-southern_english_female-low",
+ "logo": "video/assets/logo.png",
+ "pad": 0.4,
+ "scenes": [
+  {
+   "type": "hook",
+   "line1": "40,000 people bought this on Amazon this month",
+   "line2": "and Superdrug wants £8 more for it",
+   "vo": "Forty thousand people bought this on Amazon this month. And Superdrug wants eight pounds more for it."
+  },
+  {
+   "type": "product",
+   "name": "Medicube collagen balm",
+   "image": "video/assets/medicube.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£16.90",
+   "store_alt": "WAS",
+   "price_alt": "£18.59",
+   "badge": "40K+ bought this month",
+   "note": "#1 best seller in eye balms",
+   "vo": "Medicube's P D R N collagen balm stick. Number one best seller in eye balms, sixteen ninety right now. You swipe it under the eyes, along smile lines, on the neck, anywhere that looks tired."
+  },
+  {
+   "type": "product",
+   "name": "vs Superdrug",
+   "image": "video/assets/medicube.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£16.90",
+   "store_alt": "SUPERDRUG",
+   "price_alt": "£25",
+   "badge": "Korean, went viral on TikTok",
+   "note": "Same 10g stick, £8 cheaper on Amazon",
+   "vo": "Superdrug lists the same ten gram stick at twenty-five pounds. Amazon's sixteen ninety, so that's eight quid back in your pocket for the exact same thing."
+  },
+  {
+   "type": "outro",
+   "line1": "Link on the site",
+   "line2": "finditcheaper.co.uk",
+   "small": "Prices checked 12 Oct 2026. Contains affiliate links.",
+   "vo": "Link's at find it cheaper dot co dot UK. Follow for one of these every day."
+  }
+ ]
+}

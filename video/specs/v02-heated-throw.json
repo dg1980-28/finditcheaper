@@ -1,0 +1,44 @@
+{
+ "voice": "en-gb-southern_english_female-low",
+ "logo": "video/assets/logo.png",
+ "pad": 0.4,
+ "scenes": [
+  {
+   "type": "hook",
+   "line1": "4,000 people bought this on Amazon this month",
+   "line2": "and it's cheaper than putting the heating on",
+   "vo": "Four thousand people bought this on Amazon this month. And it's cheaper than putting the heating on."
+  },
+  {
+   "type": "product",
+   "name": "Heated throw",
+   "image": "video/assets/heated-throw.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£25.49",
+   "store_alt": "WAS",
+   "price_alt": "£29.99",
+   "badge": "4K+ bought this month",
+   "note": "10 heat settings, 9 hour timer, machine washable",
+   "vo": "A heated throw. Twenty-five forty-nine right now, down from thirty. Ten heat settings, a nine hour timer, and it goes in the washing machine."
+  },
+  {
+   "type": "product",
+   "name": "vs Silentnight at Argos",
+   "image": "video/assets/heated-throw.jpg",
+   "store_main": "AMAZON BEST SELLER",
+   "price_main": "£25.49",
+   "store_alt": "ARGOS Silentnight",
+   "price_alt": "£60",
+   "badge": "Runs for pennies an hour",
+   "note": "Argos wants £60 for Silentnight's",
+   "vo": "Argos wants sixty quid for the Silentnight one. This is the Amazon best seller at less than half that. It uses about the same power as a light bulb, so an evening on the sofa costs pennies."
+  },
+  {
+   "type": "outro",
+   "line1": "Link on the site",
+   "line2": "finditcheaper.co.uk",
+   "small": "Prices checked 11 Oct 2026. Contains affiliate links.",
+   "vo": "Link's at find it cheaper dot co dot UK. Follow for one of these every day."
+  }
+ ]
+}
