@@ -39,10 +39,12 @@ Write `video/specs/vNN-<slug>.json` using `video/specs/v03-medicube.json` as the
 - `vo` lines are what piper reads. Write numbers as words ("sixteen ninety"), spell out initialisms with spaces ("P D R N"). Keep total length 25 to 35 seconds; `pad` 0.4.
 - Claims must match what was checked. Never say "same thing" about a different model; say "vs Silentnight at Argos".
 
+Rendering happens in GitHub Actions (`.github/workflows/render.yml`), because the ElevenLabs API is blocked from the cloud sandbox but not from GitHub. Commit and push the spec; the "Render video" workflow renders `videos/vNN-slug.mp4` with the ElevenLabs voice (repo secret `ELEVENLABS_API_KEY`, voice name in repo variable `ELEVENLABS_VOICE`, default Lily) and commits the mp4 back within about 3 minutes. Poll `https://api.github.com/repos/dg1980-28/finditcheaper/actions/runs?per_page=3` until the run is complete, then `git pull`. If the workflow fails or the secret isn't set yet, render locally with the offline voice instead:
 ```
+bash tools/setup_video_env.sh
 python3 tools/build_video.py video/specs/vNN-slug.json videos/vNN-slug.mp4
 ```
-Pull four frames with ffmpeg and look at them before shipping (text clipping, price overlap). Commit the mp4 to `videos/` and push: it must be on the site for the YouTube upload trick to work.
+Either way, pull four frames with ffmpeg and look at them before shipping (text clipping, price overlap), and make sure the mp4 is pushed to `videos/`: it must be on the site for the YouTube upload trick to work.
 
 ## 4. Captions
 Write `video/research/vNN-caption.md`:

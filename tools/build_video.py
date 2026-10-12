@@ -209,10 +209,56 @@ def render_outro(bg, sc, t, dur, logo_path):
     return img
 
 
-def tts(text, voice, out_wav):
+ELEVEN_KEY = os.environ.get("ELEVENLABS_API_KEY", "").strip()
+ELEVEN_VOICE = os.environ.get("ELEVENLABS_VOICE", "Lily")   # premade British voices: Lily, Alice, George, Daniel
+ELEVEN_MODEL = os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2")
+_eleven_voice_id = None
+
+
+def _eleven_voice_id_lookup():
+    """Find the voice id by name so we never hard-code an id that might be wrong."""
+    global _eleven_voice_id
+    if _eleven_voice_id:
+        return _eleven_voice_id
+    import urllib.request
+    if len(ELEVEN_VOICE) >= 20 and " " not in ELEVEN_VOICE:
+        _eleven_voice_id = ELEVEN_VOICE  # already an id
+        return _eleven_voice_id
+    req = urllib.request.Request("https://api.elevenlabs.io/v1/voices", headers={"xi-api-key": ELEVEN_KEY})
+    voices = json.load(urllib.request.urlopen(req, timeout=30))["voices"]
+    for v in voices:
+        if v["name"].lower() == ELEVEN_VOICE.lower():
+            _eleven_voice_id = v["voice_id"]
+            return _eleven_voice_id
+    raise SystemExit(f"ElevenLabs voice '{ELEVEN_VOICE}' not found; available: {[v['name'] for v in voices]}")
+
+
+def tts_eleven(text, out_wav):
+    import urllib.request
+    vid = _eleven_voice_id_lookup()
+    body = json.dumps({"text": text, "model_id": ELEVEN_MODEL,
+                       "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.25, "speed": 1.05}}).encode()
+    req = urllib.request.Request(f"https://api.elevenlabs.io/v1/text-to-speech/{vid}?output_format=mp3_44100_128",
+                                 data=body, method="POST",
+                                 headers={"xi-api-key": ELEVEN_KEY, "Content-Type": "application/json", "Accept": "audio/mpeg"})
+    mp3 = out_wav[:-4] + ".mp3"
+    with urllib.request.urlopen(req, timeout=120) as r, open(mp3, "wb") as f:
+        f.write(r.read())
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", mp3, "-ar", "44100", "-ac", "1", out_wav], check=True)
+
+
+def tts_piper(text, voice, out_wav):
     model = f"{VOICE_DIR}/{voice}.onnx"
     subprocess.run(["python3", "-m", "piper", "-m", model, "-f", out_wav, "--length-scale", "0.92"],
                    input=text.encode(), check=True, capture_output=True)
+
+
+def tts(text, voice, out_wav):
+    """ElevenLabs when ELEVENLABS_API_KEY is set (the slick voice), otherwise the offline piper voice."""
+    if ELEVEN_KEY:
+        tts_eleven(text, out_wav)
+    else:
+        tts_piper(text, voice, out_wav)
     with wave.open(out_wav) as w:
         return w.getnframes() / w.getframerate()
 

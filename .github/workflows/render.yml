@@ -1,0 +1,66 @@
+name: Render video
+# Renders a video spec into videos/<name>.mp4 with the ElevenLabs voice (repo secret
+# ELEVENLABS_API_KEY) and commits the mp4 back. Falls back to the offline piper voice
+# if the secret is not set. Triggered by pushing a spec, or by hand with a spec path.
+on:
+  push:
+    branches: [main]
+    paths: ["video/specs/*.json"]
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: "Path to the spec, e.g. video/specs/v04-oral-b-io2.json"
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: render
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Work out which specs to render
+        id: specs
+        run: |
+          if [ -n "${{ github.event.inputs.spec }}" ]; then
+            echo "list=${{ github.event.inputs.spec }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "list=$(git diff --name-only HEAD~1 HEAD -- 'video/specs/*.json' | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Install tools
+        if: steps.specs.outputs.list != ''
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q pillow numpy
+          mkdir -p fonts
+          for w in Bold Medium; do
+            curl -sSL -o "fonts/Poppins-$w.ttf" "https://github.com/google/fonts/raw/main/ofl/poppins/Poppins-$w.ttf"
+          done
+      - name: Render
+        if: steps.specs.outputs.list != ''
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE: ${{ vars.ELEVENLABS_VOICE || 'Lily' }}
+          FIC_FONT_DIR: fonts
+          FIC_VOICE_DIR: /home/runner/.cache/fic-voices
+        run: |
+          if [ -z "$ELEVENLABS_API_KEY" ]; then echo "No ElevenLabs key, using offline voice"; bash tools/setup_video_env.sh; fi
+          for spec in ${{ steps.specs.outputs.list }}; do
+            name=$(basename "$spec" .json)
+            python3 tools/build_video.py "$spec" "videos/$name.mp4"
+          done
+      - name: Commit the videos
+        if: steps.specs.outputs.list != ''
+        run: |
+          git config user.name "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add videos/*.mp4
+          git diff --cached --quiet || git commit -m "Render: ${{ steps.specs.outputs.list }}"
+          git push
