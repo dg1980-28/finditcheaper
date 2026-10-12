@@ -87,11 +87,11 @@ def page(title, body, desc, path_depth=0, canonical=""):
 <body>
 <div class="wrap">
 <header class="top">
-  <a class="brand" href="{rel}"><img src="{rel}assets/logo.png" alt="" width="34" height="34">TAX <span>HYPE</span></a>
+  <a class="brand" href="{rel}"><img src="{rel}assets/logo.png" alt="" width="34" height="34">FIND IT <span>CHEAPER</span></a>
   <nav class="nav"><a href="{rel}weeks/">Past weeks</a><a href="{SITE['tiktok']}">TikTok</a></nav>
 </header>
 {body}
-<footer>Prices were correct when checked and change often, so check the retailer before you buy. As an Amazon Associate, Tax Hype earns from qualifying purchases. Some buttons are affiliate links; you pay the same price either way.</footer>
+<footer>Prices were correct when checked and change often, so check the retailer before you buy. As an Amazon Associate, Find It Cheaper earns from qualifying purchases. Some buttons are affiliate links; you pay the same price either way.</footer>
 </div>
 </body>
 </html>
@@ -162,7 +162,7 @@ def main():
     urls = [""]
     # home
     intro = f'<p class="lede">{esc(SITE["tagline"])}</p>'
-    write("index.html", page(f"{SITE['name']}: find it cheaper", intro + build_week(latest, 0), SITE["tagline"], 0, ""))
+    write("index.html", page(f"{SITE['name']}: what the UK is buying this week", intro + build_week(latest, 0), SITE["tagline"], 0, ""))
     # weeks
     for w in weeks:
         write(f"weeks/{w['date']}/index.html", page(f"{w['title']} ({nice_date(w['date'])})", build_week(w, 2), f"The products from the {nice_date(w['date'])} video, with prices compared.", 2, f"weeks/{w['date']}/"))
