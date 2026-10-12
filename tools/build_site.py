@@ -145,7 +145,14 @@ def product_page(slug, prod):
 <h2>Price comparison</h2>
 <div class="tablewrap"><table><thead><tr><th>Retailer</th><th>Price</th><th></th></tr></thead><tbody>{table}</tbody></table></div>
 """
-    title = f"{prod['short']}: cheapest price in the UK"
+    # Newspaper-style title with the number in it when there is a real gap
+    stores = [p for p in prod["prices"] if p is not best]
+    if stores:
+        dearest = max(stores, key=lambda p: p["price"])
+        gap = dearest["price"] - best["price"]
+        title = f"{prod['short']} is £{gap:.2f}".replace(".00", "") + f" cheaper at {best['store']} than {dearest['store']}" if gap >= 1 else f"{prod['short']}: cheapest price in the UK"
+    else:
+        title = f"{prod['short']}: cheapest price in the UK"
     desc = f"{prod['name']} compared at {', '.join(sorted(set(p['store'] for p in prod['prices'])))}. Cheapest is {best['store']} at {gbp(best['price'])}, checked {nice_date(prod['checked'])}."
     return page(title, body, desc, 2, f"products/{slug}/")
 
