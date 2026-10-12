@@ -11,7 +11,13 @@
       "date": "2026-10-11",
       "title": "5 things the UK is buying right now",
       "video": "https://www.tiktok.com/@taxhype2027/video/7695533072627895574",
-      "products": ["heated-throw", "lumie-sunrise-alarm", "karcher-wv1", "medicube-pdrn-balm", "shark-flexstyle"]
+      "products": [
+        "heated-throw",
+        "lumie-sunrise-alarm",
+        "karcher-wv1",
+        "medicube-pdrn-balm",
+        "shark-flexstyle"
+      ]
     }
   ],
   "products": {
@@ -23,9 +29,25 @@
       "badge": "4K+ bought this month",
       "checked": "2026-10-11",
       "prices": [
-        {"store": "Amazon", "price": 25.49, "was": 29.99, "asin": "B0D8VHSJWN", "note": "Limited time deal"},
-        {"store": "Argos", "price": 60.00, "product": "Silentnight Luxury Heated Throw", "url": "https://www.argos.co.uk/search/silentnight-heated-throw/"},
-        {"store": "Amazon", "price": 45.00, "product": "Silentnight Comfort Control Heated Throw", "asin": "B0FG3D7JFR"}
+        {
+          "store": "Amazon",
+          "price": 25.49,
+          "was": 29.99,
+          "asin": "B0D8VHSJWN",
+          "note": "Limited time deal"
+        },
+        {
+          "store": "Argos",
+          "price": 60.0,
+          "product": "Silentnight Luxury Heated Throw",
+          "url": "https://www.argos.co.uk/search/silentnight-heated-throw/"
+        },
+        {
+          "store": "Amazon",
+          "price": 45.0,
+          "product": "Silentnight Comfort Control Heated Throw",
+          "asin": "B0FG3D7JFR"
+        }
       ]
     },
     "lumie-sunrise-alarm": {
@@ -36,8 +58,17 @@
       "badge": "3K+ bought this month",
       "checked": "2026-10-11",
       "prices": [
-        {"store": "Amazon", "price": 39.99, "was": 49.99, "asin": "B07GB2MMK5"},
-        {"store": "Argos", "price": 49.00, "url": "https://www.argos.co.uk/search/lumie-sunrise-alarm/"}
+        {
+          "store": "Amazon",
+          "price": 39.99,
+          "was": 49.99,
+          "asin": "B07GB2MMK5"
+        },
+        {
+          "store": "Argos",
+          "price": 49.0,
+          "url": "https://www.argos.co.uk/search/lumie-sunrise-alarm/"
+        }
       ]
     },
     "karcher-wv1": {
@@ -48,20 +79,43 @@
       "badge": "5K+ bought this month",
       "checked": "2026-10-11",
       "prices": [
-        {"store": "Amazon", "price": 34.99, "was": 44.99, "asin": "B0CH3JRYX1"},
-        {"store": "Argos", "price": 40.00, "url": "https://www.argos.co.uk/search/karcher-wv1/"}
+        {
+          "store": "Amazon",
+          "price": 34.99,
+          "was": 44.99,
+          "asin": "B0CH3JRYX1"
+        },
+        {
+          "store": "Argos",
+          "price": 40.0,
+          "url": "https://www.argos.co.uk/search/karcher-wv1/"
+        }
       ]
     },
     "medicube-pdrn-balm": {
       "name": "Medicube PDRN Collagen Volume Multi Balm Stick",
       "short": "Medicube collagen balm",
       "image": "medicube.jpg",
-      "blurb": "The most-bought skincare product on Amazon UK right now. A balm stick for under-eyes, smile lines, neck and lips. Korean brand, went viral on TikTok in the summer and hasn't slowed down.",
+      "blurb": "The most-bought skincare product on Amazon UK right now and the number one best seller in eye balms. A balm stick for under-eyes, smile lines, neck and lips. Korean brand, went viral on TikTok in the summer and hasn't slowed down. Superdrug lists the same 10g stick at £25.",
       "badge": "40K+ bought this month",
-      "checked": "2026-10-11",
+      "checked": "2026-10-12",
       "prices": [
-        {"store": "Amazon", "price": 16.90, "asin": "B0GHMZXX8Y"}
-      ]
+        {
+          "store": "Amazon",
+          "price": 16.9,
+          "was": 18.59,
+          "asin": "B0GHMZXX8Y",
+          "note": "#1 best seller in eye balms"
+        },
+        {
+          "store": "Superdrug",
+          "price": 25.0,
+          "product": "Medicube PDRN Pink Collagen Volume Multi Balm 10g",
+          "url": "https://www.superdrug.com/skin/face-skin-care/moisturising-lotions/medicube-pdrn-pink-collagen-volume-multi-balm-10g/p/mp-00527598",
+          "note": "Not available online when checked"
+        }
+      ],
+      "video": "https://www.tiktok.com/@taxhype2027"
     },
     "shark-flexstyle": {
       "name": "Shark FlexStyle 5-in-1 Air Styler and Hair Dryer",
@@ -71,8 +125,18 @@
       "badge": "1K+ bought this month",
       "checked": "2026-10-11",
       "prices": [
-        {"store": "Amazon", "price": 229.99, "was": 269.99, "asin": "B0FMRYXSQG"},
-        {"store": "Argos", "price": 229.99, "was": 299.99, "url": "https://www.argos.co.uk/search/shark-flexstyle/"}
+        {
+          "store": "Amazon",
+          "price": 229.99,
+          "was": 269.99,
+          "asin": "B0FMRYXSQG"
+        },
+        {
+          "store": "Argos",
+          "price": 229.99,
+          "was": 299.99,
+          "url": "https://www.argos.co.uk/search/shark-flexstyle/"
+        }
       ]
     }
   }
