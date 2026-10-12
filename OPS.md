@@ -19,7 +19,7 @@ Commit as `Claude <noreply@anthropic.com>`.
 
 ## 1. Pick today's product
 1. Read `video/research/*.md` for the current shortlist and what has already been posted. `data/products.json` lists every product already on the site, and each has `video` if it has been posted.
-2. Signal for trending: Amazon UK best seller lists (`/gp/bestsellers/beauty/`, `kitchen`, `drugstore`, `electronics`, `home-garden`, `diy`, `lighting`) and the "N+ bought in past month" line on each product page. Movers & Shakers is usually empty for the UK. TikTok's Creative Center needs an ad login and TikTok search is not a trend radar; don't bother.
+2. First check Amazon Movers & Shakers (`https://www.amazon.co.uk/gp/movers-and-shakers/` and the per-category pages, e.g. `/gp/movers-and-shakers/beauty/`). It lists the biggest 24 hour sales rank climbers with a percentage. It is often empty from the sandbox; if it loads in a browser tab with cookies accepted, anything up 500% or more with 1K+ bought is the day's video candidate, and the climbers go in the log. Then the signal for trending: Amazon UK best seller lists (`/gp/bestsellers/beauty/`, `kitchen`, `drugstore`, `electronics`, `home-garden`, `diy`, `lighting`) and the "N+ bought in past month" line on each product page. Movers & Shakers is usually empty for the UK. TikTok's Creative Center needs an ad login and TikTok search is not a trend radar; don't bother.
 3. Weight towards beauty and household (highest Amazon commission and biggest counts). Avoid Amazon's own devices unless the deal is huge, because every retailer matches those prices.
 4. The best videos have a price gap: Amazon vs Argos, Boots, Superdrug, Currys or B&Q. Check the competitor the same day. Boots and Superdrug block plain fetches; load the page in a browser tab (`https://www.boots.com/sitesearch?searchTerm=...`, `https://www.argos.co.uk/search/<words-with-dashes>/`) and read the text. Argos in-page fetch is bot-blocked; navigate to each search instead.
 5. Re-check the Amazon price on the day. Deal prices (especially around Prime Day and Black Friday) move.
@@ -56,6 +56,7 @@ Write `video/research/vNN-caption.md`:
 4. Message the owner (SendUserMessage) with: product, prices, what's uploaded, the exact two clicks he has left.
 
 ## 6. Rules
+- Urgency is allowed when it's true, and it helps: "limited time deal", "was £160 last week", "5,000 bought this month", "only 3 left" when Amazon shows that, "clocks go back Sunday". Lead with the number. Never invent scarcity or a fake countdown; UK law (DMCC Act 2024) bans fake urgency and Amazon closes Associate accounts for it. If Amazon shows a deal end time, put "ends <day>" on screen and in the caption.
 - Prices in GBP, British English, no dashes in any text or captions.
 - One video a day, posted 6 to 9pm UK. Don't stack two in a day.
 - Never fabricate a competitor price. If no competitor was found, do a "was/now" deal angle and say so.
