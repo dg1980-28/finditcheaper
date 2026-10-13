@@ -36,8 +36,9 @@ CSS = """
 *{box-sizing:border-box}html{background:var(--bg)}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.5;padding-inline:16px;padding-block:0 56px}
 a{color:var(--accent)}.wrap{max-width:720px;margin:0 auto}
-.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg);font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.3px}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;padding:18px 0;border-bottom:1px solid var(--line)}
+.nav{white-space:nowrap;margin-left:auto}
+.brand{display:flex;white-space:nowrap;align-items:center;gap:10px;text-decoration:none;color:var(--fg);font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.3px}
 .brand img{width:34px;height:34px;border-radius:50%}
 .brand span{color:var(--accent)}
 .nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:14px}.nav a:hover{color:var(--fg)}
@@ -88,7 +89,7 @@ def page(title, body, desc, path_depth=0, canonical=""):
 <div class="wrap">
 <header class="top">
   <a class="brand" href="{rel}"><img src="{rel}assets/logo.png" alt="" width="34" height="34">FIND IT <span>CHEAPER</span></a>
-  <nav class="nav"><a href="{rel}weeks/">Past weeks</a><a href="{SITE['tiktok']}">TikTok</a></nav>
+  <nav class="nav"><a href="{rel}deals.html">Deals today</a><a href="{rel}weeks/">Past weeks</a><a href="{SITE['tiktok']}">TikTok</a></nav>
 </header>
 {body}
 <footer>Prices were correct when checked and change often, so check the retailer before you buy. As an Amazon Associate, Find It Cheaper earns from qualifying purchases. Some buttons are affiliate links; you pay the same price either way.</footer>
@@ -157,6 +158,37 @@ def product_page(slug, prod):
     return page(title, body, desc, 2, f"products/{slug}/")
 
 
+def amazon_deals():
+    """Every product whose Amazon row has a was price above the current price, best saving first."""
+    deals = []
+    for slug, prod in DATA["products"].items():
+        for p in prod["prices"]:
+            if p["store"] == "Amazon" and p.get("was") and p["was"] > p["price"]:
+                pct = (p["was"] - p["price"]) / p["was"] * 100
+                deals.append((pct, slug, prod, p))
+                break
+    return sorted(deals, key=lambda d: d[0], reverse=True)
+
+
+def build_deals():
+    deals = amazon_deals()
+    rows = []
+    for pct, slug, prod, p in deals:
+        note = f" · {esc(p['note'])}" if p.get("note") else ""
+        rows.append(f"""<div class="item">
+  <img src="assets/products/{prod['image']}" alt="{esc(prod['short'])}" loading="lazy" width="96" height="96">
+  <div><div class="name"><a href="products/{slug}/">{esc(prod['name'])}</a></div>
+  <div class="sub">Save {pct:.0f}% · was {gbp(p['was'])} · checked {nice_date(prod['checked'])}{note}</div>
+  <div class="price">{gbp(p['price'])}</div></div>
+  <a class="btn cta" href="products/{slug}/">Compare</a>
+</div>""")
+    if rows:
+        body = f'<h1>Deals today</h1><p class="lede">Every product on the site that Amazon has cut the price of, biggest saving first. Was prices are what Amazon showed when we checked.</p><div class="list">{"".join(rows)}</div>'
+    else:
+        body = '<h1>Deals today</h1><p class="lede">Nothing is on a cut price right now. <a href="/">Back to this week\'s products.</a></p>'
+    return page("Deals today: Amazon price cuts on trending UK products", body, "Trending UK products that Amazon has reduced, sorted by saving, with the date each price was checked.", 0, "deals.html")
+
+
 def write(path, content):
     full = os.path.join(ROOT, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
@@ -177,6 +209,9 @@ def main():
     archive = "".join(f'<div class="item" style="grid-template-columns:1fr auto"><div><div class="name"><a href="{w["date"]}/">{esc(w["title"])}</a></div><div class="sub">{nice_date(w["date"])} · {len(w["products"])} products</div></div><a class="btn alt" href="{w["date"]}/">Open</a></div>' for w in weeks)
     write("weeks/index.html", page("Past weeks", f"<h1>Past weeks</h1><div class=\"list\">{archive}</div>", "Every weekly roundup from Find It Cheaper.", 1, "weeks/"))
     urls.append("weeks/")
+    # deals
+    write("deals.html", build_deals())
+    urls.append("deals.html")
     # products
     for slug, prod in DATA["products"].items():
         write(f"products/{slug}/index.html", product_page(slug, prod))
