@@ -3,6 +3,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # A push made by the Render video workflow (GITHUB_TOKEN) does not trigger push
+  # workflows, so redeploy when a render finishes to get the mp4 and image live.
+  workflow_run:
+    workflows: ["Render video"]
+    types: [completed]
 permissions:
   contents: read
   pages: write
