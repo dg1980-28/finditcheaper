@@ -138,6 +138,38 @@
           "url": "https://www.argos.co.uk/search/shark-flexstyle/"
         }
       ]
+    },
+    "oral-b-io2-duo": {
+      "name": "Oral-B iO2 Duo electric toothbrushes (2 handles, Night Black and Calm Pink)",
+      "short": "Oral-B iO2 Duo (2 brushes)",
+      "image": "oral-b-io2-duo.jpg",
+      "blurb": "Two Oral-B iO2 electric toothbrushes in one box, with two heads, a travel case and a refill holder. Pressure sensor, two minute timer and three quiet intensity settings, designed by Braun. Amazon has it on a limited time deal at £59.98 against a £160 RRP, while Boots lists the same Night Black and Calm Pink duo pack at £70 and Argos at £65.",
+      "badge": "3K+ bought this month",
+      "checked": "2026-10-14",
+      "prices": [
+        {
+          "store": "Amazon",
+          "price": 59.98,
+          "was": 160.0,
+          "asin": "B0DNG1YCQN",
+          "note": "Limited time deal, 63% off RRP, sold by Amazon"
+        },
+        {
+          "store": "Boots",
+          "price": 70.0,
+          "was": 160.0,
+          "product": "Oral-B iO2 Electric Toothbrush Night Black and Calm Pink Duo Pack",
+          "url": "https://boots.com/oral-b-io2-electric-toothbrush-night-black-and-calm-pink-duo-pack-10356965",
+          "note": "Better than half price offer, in stock online"
+        },
+        {
+          "store": "Argos",
+          "price": 65.0,
+          "product": "Oral-B iO2 Duo Pack Electric Toothbrush Night Black/Pink",
+          "url": "https://www.argos.co.uk/product/4667456",
+          "note": "Argos says this is its lowest ever price"
+        }
+      ]
     }
   }
 }

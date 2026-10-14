@@ -1,0 +1,50 @@
+{
+ "voice": "en-gb-southern_english_female-low",
+ "logo": "video/assets/logo.png",
+ "pad": 0.4,
+ "scenes": [
+  {
+   "type": "hook",
+   "line1": "3,000 people bought this on Amazon this month",
+   "line2": "and Boots wants £10 more for it",
+   "vo": "Three thousand people bought this on Amazon this month. And Boots wants ten pounds more for it."
+  },
+  {
+   "type": "product",
+   "name": "Oral-B iO2 Duo, two brushes",
+   "image": "video/assets/oral-b-io2-duo.jpg",
+   "image_sources": [
+    "B0DNG1YCQN",
+    "https://media.4rgos.it/i/Argos/4667456_R_Z001A?w=800&h=800",
+    "https://boots.scene7.com/is/image/Boots/10356965?wid=800&hei=800&fmt=jpg"
+   ],
+   "store_main": "AMAZON",
+   "price_main": "£59.98",
+   "store_alt": "WAS",
+   "price_alt": "£160",
+   "badge": "3K+ bought this month",
+   "note": "Limited time deal, 63% off RRP",
+   "vo": "Two Oral-B i O two electric toothbrushes, two heads, a travel case. Fifty nine ninety eight on Amazon right now, against a hundred and sixty pound R R P. That's a limited time deal, so it won't hang about."
+  },
+  {
+   "type": "product",
+   "name": "vs Boots",
+   "image": "video/assets/oral-b-io2-duo.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£59.98",
+   "store_alt": "BOOTS",
+   "price_alt": "£70",
+   "badge": "Same Night Black and Calm Pink duo",
+   "note": "Argos has it at £65. Amazon is cheapest.",
+   "vo": "Boots lists the exact same duo pack at seventy pounds, and Argos at sixty five. Amazon's fifty nine ninety eight, so that's a tenner back in your pocket for the same box."
+  },
+  {
+   "type": "outro",
+   "line1": "Link on the site",
+   "line2": "finditcheaper.co.uk",
+   "small": "Prices checked 14 Oct 2026. Contains affiliate links.",
+   "vo": "Link's at find it cheaper dot co dot UK. Follow for one of these every day."
+  }
+ ],
+ "note": "rendered by the Render video workflow"
+}

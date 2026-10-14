@@ -43,6 +43,20 @@ jobs:
           for w in Bold Medium; do
             curl -sSL -o "fonts/Poppins-$w.ttf" "https://github.com/google/fonts/raw/main/ofl/poppins/Poppins-$w.ttf"
           done
+      - name: Fetch product images the sandbox could not reach
+        if: steps.specs.outputs.list != ''
+        run: |
+          for spec in ${{ steps.specs.outputs.list }}; do
+            python3 - "$spec" <<'EOF'
+          import json, os, subprocess, sys
+          spec = json.load(open(sys.argv[1]))
+          for sc in spec.get("scenes", []):
+              img, srcs = sc.get("image"), sc.get("image_sources")
+              if img and srcs and not os.path.exists(img):
+                  slug = os.path.splitext(os.path.basename(img))[0]
+                  subprocess.run([sys.executable, "tools/fetch_image.py", slug, *srcs], check=True)
+          EOF
+          done
       - name: Render
         if: steps.specs.outputs.list != ''
         env:
@@ -61,6 +75,6 @@ jobs:
         run: |
           git config user.name "Claude"
           git config user.email "noreply@anthropic.com"
-          git add videos/*.mp4
+          git add videos/*.mp4 assets/products/*.jpg video/assets/*.jpg
           git diff --cached --quiet || git commit -m "Render: ${{ steps.specs.outputs.list }}"
           git push
