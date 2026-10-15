@@ -3,6 +3,11 @@ name: Scrape Amazon
 # to read Movers & Shakers, the best seller lists and product pages from the runner
 # and commit the result (video/research/scrape/<date>.json plus 600px images) back.
 on:
+  # Pushing video/research/scrape/request.json ({"asins": "...", "max_products": N})
+  # starts a run too, because the GitHub App the sandbox uses cannot dispatch workflows.
+  push:
+    branches: [main]
+    paths: ["video/research/scrape/request.json"]
   workflow_dispatch:
     inputs:
       asins:
@@ -30,10 +35,16 @@ jobs:
       - name: Read Amazon
         run: |
           day=$(date -u +%F)
+          asins="${{ github.event.inputs.asins }}"
+          maxp="${{ github.event.inputs.max_products }}"
+          if [ -z "$asins$maxp" ] && [ -f video/research/scrape/request.json ]; then
+            asins=$(python3 -c "import json;print(json.load(open('video/research/scrape/request.json')).get('asins',''))")
+            maxp=$(python3 -c "import json;print(json.load(open('video/research/scrape/request.json')).get('max_products',60))")
+          fi
           python3 tools/scrape_amazon.py "video/research/scrape/$day.json" \
             --images "video/research/scrape/images" \
-            --max-products "${{ github.event.inputs.max_products }}" \
-            ${{ github.event.inputs.asins }}
+            --max-products "${maxp:-60}" \
+            $asins
       - name: Commit the result
         run: |
           git config user.name "Claude"
