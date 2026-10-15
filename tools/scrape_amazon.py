@@ -264,7 +264,7 @@ def parse_product(asin, html):
     d["checked"] = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     # the visible text from the title onwards, for checking anything the regexes missed
     i = full.find(d["title"][:40]) if d.get("title") else -1
-    d["page_text"] = full[max(i, 0):max(i, 0) + 5000]
+    d["page_text"] = full[max(i, 0):max(i, 0) + 40000]
     d["currency_usd"] = "USD" in ct
     return d
 
