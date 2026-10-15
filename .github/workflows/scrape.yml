@@ -26,12 +26,15 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -q pillow
+      - run: |
+          pip install -q pillow playwright
+          python -m playwright install --with-deps chromium
       - name: Read Amazon
         run: |
           day=$(date -u +%F)
@@ -43,7 +46,7 @@ jobs:
           fi
           python3 tools/scrape_amazon.py "video/research/scrape/$day.json" \
             --images "video/research/scrape/images" \
-            --max-products "${maxp:-60}" \
+            --max-products "${maxp:-60}" --browser \
             $asins
       - name: Commit the result
         run: |

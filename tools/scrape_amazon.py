@@ -2,7 +2,10 @@
 """Read Amazon UK Movers & Shakers, best seller lists and product pages, and write
 the result as JSON for the morning site-growth run.
 
-Usage: python3 tools/scrape_amazon.py <out.json> [--images DIR] [--max-products N] [ASIN ...]
+Usage: python3 tools/scrape_amazon.py <out.json> [--images DIR] [--max-products N] [--browser] [ASIN ...]
+
+--browser reads product pages through headless Chromium (Playwright), which Amazon
+robot-checks far less than plain requests from a runner.
 
 Meant to run in GitHub Actions (the cloud sandbox cannot reach amazon.co.uk). The
 workflow commits <out.json> and the images back to the repo so the sandbox can read
@@ -29,14 +32,75 @@ BESTSELLERS = ["beauty", "drugstore", "kitchen", "home-garden", "diy", "lighting
 DELAY = 1.5
 
 
+BROWSER = {"page": None}
+
+
+def is_robot(html):
+    return ("Robot Check" in html or "api-services-support@amazon.com" in html
+            or "Enter the characters you see below" in html
+            or "Sorry, we just need to make sure you're not a robot" in html)
+
+
+def start_browser():
+    """Headless Chromium with a persistent session: Amazon serves product pages to a
+    real browser far more reliably than to plain requests from a runner IP."""
+    from playwright.sync_api import sync_playwright
+    pw = sync_playwright().start()
+    browser = pw.chromium.launch(headless=True, args=["--disable-blink-features=AutomationControlled"])
+    ctx = browser.new_context(
+        user_agent=fetch_image.UA, locale="en-GB", timezone_id="Europe/London",
+        viewport={"width": 1366, "height": 900},
+        extra_http_headers={"Accept-Language": "en-GB,en;q=0.9"})
+    ctx.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    page = ctx.new_page()
+    page.goto(BASE + "/", wait_until="domcontentloaded", timeout=60000)
+    time.sleep(2)
+    for sel in ("#sp-cc-accept", "input#sp-cc-accept", "button:has-text('Accept')"):
+        try:
+            page.locator(sel).first.click(timeout=3000)
+            break
+        except Exception:
+            pass
+    time.sleep(1.5)
+    BROWSER["page"] = page
+    BROWSER["page_keep"] = page
+    BROWSER["pw"] = pw
+    return page
+
+
+def browser_get(url, tries=3):
+    page = BROWSER["page"]
+    last = None
+    for i in range(tries):
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=60000)
+            time.sleep(2.5)
+            html = page.content()
+            if is_robot(html):
+                last = "robot"
+                time.sleep(20 + 20 * i)
+                continue
+            if "productTitle" not in html and "/dp/" in url:
+                # sometimes a continue/interstitial page; one more try
+                last = "no product title"
+                time.sleep(5)
+                continue
+            return html, None
+        except Exception as e:
+            last = f"{type(e).__name__}: {e}"[:120]
+            time.sleep(5)
+    return None, last
+
+
 def get(url, tries=3):
+    if BROWSER["page"] is not None:
+        return browser_get(url, tries)
     last = None
     for i in range(tries):
         try:
             data, _ = fetch_image.get(url, timeout=40)
             html = data.decode("utf-8", "replace")
-            if "Robot Check" in html or "api-services-support@amazon.com" in html \
-                    or "Enter the characters you see below" in html:
+            if is_robot(html):
                 last = "robot"
                 time.sleep(4 + 3 * i)
                 continue
@@ -62,7 +126,10 @@ def text(html):
 
 def block(html, start_pat, length=6000):
     m = re.search(start_pat, html)
-    return html[m.start():m.start() + length] if m else ""
+    if not m:
+        return ""
+    start = html.rfind("<", 0, m.start())
+    return html[max(start, 0):m.start() + length]
 
 
 def parse_list(html):
@@ -164,6 +231,10 @@ def parse_product(asin, html):
 
 def fetch_product(asin, images):
     html, err = get(f"{BASE}/dp/{asin}?th=1&psc=1")
+    if html is None and BROWSER["page"] is not None:
+        BROWSER["page"] = None  # try once without the browser, then put it back
+        html, err = get(f"{BASE}/dp/{asin}?th=1&psc=1")
+        BROWSER["page"] = BROWSER.get("page_keep")
     if html is None:
         return {"asin": asin, "status": err or "error"}
     d = parse_product(asin, html)
@@ -183,11 +254,13 @@ def fetch_product(asin, images):
 
 def main(argv):
     out = argv[0]
-    images, max_products, extra = None, 60, []
+    images, max_products, extra, use_browser = None, 60, [], False
     i = 1
     while i < len(argv):
         if argv[i] == "--images":
             images = argv[i + 1]; i += 2
+        elif argv[i] == "--browser":
+            use_browser = True; i += 1
         elif argv[i] == "--max-products":
             max_products = int(argv[i + 1]); i += 2
         else:
@@ -214,6 +287,12 @@ def main(argv):
                 queue.append(col[row])
     seen = set()
     todo = [a for a in queue if not (a in seen or seen.add(a))][:max_products]
+    if use_browser:
+        try:
+            start_browser()
+            print("browser started")
+        except Exception as e:
+            print("browser failed to start, falling back to plain requests:", e)
     for a in todo:
         res["products"][a] = fetch_product(a, images)
         p = res["products"][a]
