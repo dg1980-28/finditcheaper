@@ -2,7 +2,7 @@
 """Read Amazon UK Movers & Shakers, best seller lists and product pages, and write
 the result as JSON for the morning site-growth run.
 
-Usage: python3 tools/scrape_amazon.py <out.json> [--images DIR] [--max-products N] [--browser] [ASIN ...]
+Usage: python3 tools/scrape_amazon.py <out.json> [--images DIR] [--max-products N] [--browser] [--budget-seconds S] [ASIN ...]
 
 --browser reads product pages through headless Chromium (Playwright), which Amazon
 robot-checks far less than plain requests from a runner.
@@ -46,7 +46,11 @@ def start_browser():
     real browser far more reliably than to plain requests from a runner IP."""
     from playwright.sync_api import sync_playwright
     pw = sync_playwright().start()
-    browser = pw.chromium.launch(headless=True, args=["--disable-blink-features=AutomationControlled"])
+    args = ["--disable-blink-features=AutomationControlled"]
+    try:  # full Chrome for Testing in new headless mode looks like a normal browser
+        browser = pw.chromium.launch(headless=True, channel="chromium", args=args)
+    except Exception:
+        browser = pw.chromium.launch(headless=True, args=args)
     ctx = browser.new_context(
         user_agent=fetch_image.UA, locale="en-GB", timezone_id="Europe/London",
         viewport={"width": 1366, "height": 900},
@@ -68,7 +72,7 @@ def start_browser():
     return page
 
 
-def browser_get(url, tries=3):
+def browser_get(url, tries=2):
     page = BROWSER["page"]
     last = None
     for i in range(tries):
@@ -78,7 +82,8 @@ def browser_get(url, tries=3):
             html = page.content()
             if is_robot(html):
                 last = "robot"
-                time.sleep(20 + 20 * i)
+                if i + 1 < tries:
+                    time.sleep(15)
                 continue
             if "productTitle" not in html and "/dp/" in url:
                 # sometimes a continue/interstitial page; one more try
@@ -149,7 +154,9 @@ def parse_list(html):
         rank = re.search(r"#(\d+)", t)
         bought = re.search(r"([\d,]+K?\+?) bought in past month", t)
         rating = re.search(r"(\d\.\d) out of 5 stars", t)
+        img = re.search(r'src="(https://[^"]+/images/I/([A-Za-z0-9+%-]+)\.[^"]*\.jpg)"', p)
         items.append({
+            "image": f"https://m.media-amazon.com/images/I/{img.group(2)}._SL800_.jpg" if img else None,
             "rank": int(rank.group(1)) if rank else None,
             "asin": asin.group(1),
             "name": (name.group(1) if name else "").replace("&amp;", "&").replace("&quot;", '"'),
@@ -254,13 +261,15 @@ def fetch_product(asin, images):
 
 def main(argv):
     out = argv[0]
-    images, max_products, extra, use_browser = None, 60, [], False
+    images, max_products, extra, use_browser, budget = None, 60, [], False, 1500
     i = 1
     while i < len(argv):
         if argv[i] == "--images":
             images = argv[i + 1]; i += 2
         elif argv[i] == "--browser":
             use_browser = True; i += 1
+        elif argv[i] == "--budget-seconds":
+            budget = int(argv[i + 1]); i += 2
         elif argv[i] == "--max-products":
             max_products = int(argv[i + 1]); i += 2
         else:
@@ -293,14 +302,22 @@ def main(argv):
             print("browser started")
         except Exception as e:
             print("browser failed to start, falling back to plain requests:", e)
+    def save():
+        os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
+        with open(out, "w") as f:
+            json.dump(res, f, indent=1, ensure_ascii=False)
+    save()
+    t0 = time.time()
     for a in todo:
+        if time.time() - t0 > budget:
+            print("time budget used up, stopping product pages", flush=True)
+            res["stopped_early"] = True
+            break
         res["products"][a] = fetch_product(a, images)
         p = res["products"][a]
-        print("product", a, p.get("status"), p.get("price"), p.get("was"), p.get("bought"), (p.get("title") or "")[:50])
+        print("product", a, p.get("status"), p.get("price"), p.get("was"), p.get("bought"), (p.get("title") or "")[:50], flush=True)
+        save()  # keep what we have if the job is cut short
         time.sleep(DELAY)
-    os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
-    with open(out, "w") as f:
-        json.dump(res, f, indent=1, ensure_ascii=False)
     print("wrote", out)
     return 0
 
