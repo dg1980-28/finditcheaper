@@ -51,36 +51,50 @@ def start_browser():
         browser = pw.chromium.launch(headless=True, channel="chromium", args=args)
     except Exception:
         browser = pw.chromium.launch(headless=True, args=args)
-    ctx = browser.new_context(
-        user_agent=fetch_image.UA, locale="en-GB", timezone_id="Europe/London",
-        viewport={"width": 1366, "height": 900},
-        extra_http_headers={"Accept-Language": "en-GB,en;q=0.9"})
-    ctx.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-    # The runner is outside the UK, so Amazon would otherwise quote USD and hide
-    # UK only offers. Ask for GBP and a UK delivery address up front.
-    ctx.add_cookies([{"name": "i18n-prefs", "value": "GBP", "domain": ".amazon.co.uk", "path": "/"},
-                     {"name": "lc-main", "value": "en_GB", "domain": ".amazon.co.uk", "path": "/"}])
-    page = ctx.new_page()
-    page.goto(BASE + "/", wait_until="domcontentloaded", timeout=60000)
-    time.sleep(2)
-    for sel in ("#sp-cc-accept", "input#sp-cc-accept", "button:has-text('Accept')"):
+    BROWSER["pw"] = pw
+    BROWSER["browser"] = browser
+    page = None
+    for attempt in range(4):
+        ctx = browser.new_context(
+            user_agent=fetch_image.UA, locale="en-GB", timezone_id="Europe/London",
+            viewport={"width": 1366, "height": 900},
+            extra_http_headers={"Accept-Language": "en-GB,en;q=0.9"})
+        ctx.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+        # The runner is outside the UK, so Amazon would otherwise quote USD and hide
+        # UK only offers. Ask for GBP and a UK delivery address up front.
+        ctx.add_cookies([{"name": "i18n-prefs", "value": "GBP", "domain": ".amazon.co.uk", "path": "/"},
+                         {"name": "lc-main", "value": "en_GB", "domain": ".amazon.co.uk", "path": "/"}])
+        page = ctx.new_page()
         try:
-            page.locator(sel).first.click(timeout=3000)
-            break
-        except Exception:
-            pass
-    time.sleep(1.5)
-    for attempt in range(3):
-        if set_uk_location(page):
-            BROWSER["location_ok"] = True
-            break
-        time.sleep(10)
+            page.goto(BASE + "/", wait_until="domcontentloaded", timeout=60000)
+            time.sleep(2)
+            if is_robot(page.content()):
+                print(f"home page is a robot check (attempt {attempt + 1}), new session after a pause", flush=True)
+                ctx.close()
+                time.sleep(45 + 30 * attempt)
+                continue
+            for sel in ("#sp-cc-accept", "input#sp-cc-accept", "button:has-text('Accept')"):
+                try:
+                    page.locator(sel).first.click(timeout=3000)
+                    break
+                except Exception:
+                    pass
+            time.sleep(1.5)
+            if set_uk_location(page):
+                BROWSER["location_ok"] = True
+                break
+            print(f"location not set (attempt {attempt + 1}), new session after a pause", flush=True)
+            ctx.close()
+            time.sleep(30)
+        except Exception as e:
+            print("session start failed:", str(e)[:150], flush=True)
+            ctx.close()
+            time.sleep(30)
     else:
         BROWSER["location_ok"] = False
         print("WARNING: UK delivery location not set; prices may be ex VAT or in USD", flush=True)
     BROWSER["page"] = page
     BROWSER["page_keep"] = page
-    BROWSER["pw"] = pw
     return page
 
 
@@ -280,7 +294,7 @@ def parse_product(asin, html):
     d["checked"] = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     # the visible text from the title onwards, for checking anything the regexes missed
     i = full.find(d["title"][:40]) if d.get("title") else -1
-    d["page_text"] = full[max(i, 0):max(i, 0) + 40000]
+    d["page_text"] = full[:60000]
     d["currency_usd"] = "USD" in ct
     return d
 
