@@ -56,6 +56,10 @@ def start_browser():
         viewport={"width": 1366, "height": 900},
         extra_http_headers={"Accept-Language": "en-GB,en;q=0.9"})
     ctx.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    # The runner is outside the UK, so Amazon would otherwise quote USD and hide
+    # UK only offers. Ask for GBP and a UK delivery address up front.
+    ctx.add_cookies([{"name": "i18n-prefs", "value": "GBP", "domain": ".amazon.co.uk", "path": "/"},
+                     {"name": "lc-main", "value": "en_GB", "domain": ".amazon.co.uk", "path": "/"}])
     page = ctx.new_page()
     page.goto(BASE + "/", wait_until="domcontentloaded", timeout=60000)
     time.sleep(2)
@@ -66,10 +70,35 @@ def start_browser():
         except Exception:
             pass
     time.sleep(1.5)
+    set_uk_location(page)
     BROWSER["page"] = page
     BROWSER["page_keep"] = page
     BROWSER["pw"] = pw
     return page
+
+
+def set_uk_location(page, postcode="SW1A 1AA"):
+    """Use the delivery location widget to set a UK postcode, so prices and stock
+    are what a UK shopper sees. Best effort; the result is printed either way."""
+    try:
+        page.locator("#nav-global-location-popover-link").click(timeout=8000)
+        page.wait_for_selector("#GLUXZipUpdateInput", timeout=10000)
+        page.fill("#GLUXZipUpdateInput", postcode)
+        page.locator("#GLUXZipUpdate").click(timeout=5000)
+        time.sleep(2)
+        for sel in ("#GLUXConfirmClose", "button[name='glowDoneButton']", ".a-popover-footer .a-button-primary input"):
+            try:
+                page.locator(sel).first.click(timeout=3000)
+                break
+            except Exception:
+                pass
+        time.sleep(2)
+        page.goto(BASE + "/", wait_until="domcontentloaded", timeout=60000)
+        time.sleep(2)
+        line = page.locator("#glow-ingress-line2").first.inner_text(timeout=5000)
+        print("delivery location now:", line, flush=True)
+    except Exception as e:
+        print("could not set UK delivery location:", str(e)[:150], flush=True)
 
 
 def browser_get(url, tries=2):
@@ -233,6 +262,10 @@ def parse_product(asin, html):
         or re.search(r'data-old-hires="(https://m\.media-amazon\.com/images/I/[^"]+)"', html)
     d["image"] = m.group(1) if m else None
     d["checked"] = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    # the visible text from the title onwards, for checking anything the regexes missed
+    i = full.find(d["title"][:40]) if d.get("title") else -1
+    d["page_text"] = full[max(i, 0):max(i, 0) + 5000]
+    d["currency_usd"] = "USD" in ct
     return d
 
 
