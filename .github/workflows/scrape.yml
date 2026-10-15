@@ -1,0 +1,43 @@
+name: Scrape Amazon
+# The cloud sandbox cannot reach amazon.co.uk, so the morning run asks this workflow
+# to read Movers & Shakers, the best seller lists and product pages from the runner
+# and commit the result (video/research/scrape/<date>.json plus 600px images) back.
+on:
+  workflow_dispatch:
+    inputs:
+      asins:
+        description: "Extra ASINs to read product pages for, space separated (existing products first)"
+        required: false
+        default: ""
+      max_products:
+        description: "How many product pages to read at most"
+        required: false
+        default: "60"
+permissions:
+  contents: write
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pillow
+      - name: Read Amazon
+        run: |
+          day=$(date -u +%F)
+          python3 tools/scrape_amazon.py "video/research/scrape/$day.json" \
+            --images "video/research/scrape/images" \
+            --max-products "${{ github.event.inputs.max_products }}" \
+            ${{ github.event.inputs.asins }}
+      - name: Commit the result
+        run: |
+          git config user.name "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add video/research/scrape
+          git diff --cached --quiet || git commit -m "Scrape: Amazon lists and product pages $(date -u +%F)"
+          git push
