@@ -2,7 +2,7 @@
 """Read Amazon UK Movers & Shakers, best seller lists and product pages, and write
 the result as JSON for the morning site-growth run.
 
-Usage: python3 tools/scrape_amazon.py <out.json> [--images DIR] [--max-products N] [--browser] [--budget-seconds S] [ASIN ...]
+Usage: python3 tools/scrape_amazon.py <out.json> [--images DIR] [--max-products N] [--browser] [--budget-seconds S] [--no-lists] [ASIN ...]
 
 --browser reads product pages through headless Chromium (Playwright), which Amazon
 robot-checks far less than plain requests from a runner.
@@ -70,7 +70,14 @@ def start_browser():
         except Exception:
             pass
     time.sleep(1.5)
-    set_uk_location(page)
+    for attempt in range(3):
+        if set_uk_location(page):
+            BROWSER["location_ok"] = True
+            break
+        time.sleep(10)
+    else:
+        BROWSER["location_ok"] = False
+        print("WARNING: UK delivery location not set; prices may be ex VAT or in USD", flush=True)
     BROWSER["page"] = page
     BROWSER["page_keep"] = page
     BROWSER["pw"] = pw
@@ -97,8 +104,10 @@ def set_uk_location(page, postcode="SW1A 1AA"):
         time.sleep(2)
         line = page.locator("#glow-ingress-line2").first.inner_text(timeout=5000)
         print("delivery location now:", line, flush=True)
+        return "SW1A" in line.replace(" ", "") or "London" in line
     except Exception as e:
         print("could not set UK delivery location:", str(e)[:150], flush=True)
+        return False
 
 
 def browser_get(url, tries=2):
@@ -218,9 +227,9 @@ def parse_product(asin, html):
     d = {"asin": asin}
     m = re.search(r'id="productTitle"[^>]*>(.*?)</span>', html, re.S)
     d["title"] = text(m.group(1)) if m else None
-    core = block(html, r'id="corePriceDisplay_desktop_feature_div"|id="corePrice_feature_div"|id="corePrice_desktop"', 12000)
-    if not core:
-        core = block(html, r'id="apex_desktop"', 15000)
+    core = block(html, r'id="corePriceDisplay_desktop_feature_div"', 12000) \
+        or block(html, r'id="apex_desktop"', 15000) \
+        or block(html, r'id="corePrice_feature_div"|id="corePrice_desktop"', 12000)
     seen = re.findall(r'class="a-offscreen">\s*(£[\d,]+\.?\d*)', core)
     d["prices_seen"] = seen
     m = re.search(r'(?:priceToPay|apexPriceToPay|a-price-whole)[^£]*?class="a-offscreen">\s*(£[\d,]+\.?\d*)', core, re.S)
@@ -238,6 +247,13 @@ def parse_product(asin, html):
     ct = text(core)
     d["price_text"] = ct[:300]
     full = text(html)
+    head = full[:20000]
+    m = re.search(r"(?:RRP|Was|List Price|Typical price):?\s?(£[\d,]+\.?\d*)", head)
+    d["was_text"] = money(m.group(1)) if m else None
+    m = re.search(r"-(\d+)%", head)
+    d["savings_text"] = int(m.group(1)) if m else None
+    if d.get("was") is None and d["was_text"]:
+        d["was"] = d["was_text"]
     m = re.search(r"([\d,]+K?\+?) bought in past month", full)
     d["bought"] = m.group(1) if m else None
     av = block(html, r'id="availability"', 1500)
@@ -294,7 +310,7 @@ def fetch_product(asin, images):
 
 def main(argv):
     out = argv[0]
-    images, max_products, extra, use_browser, budget = None, 60, [], False, 1500
+    images, max_products, extra, use_browser, budget, no_lists = None, 60, [], False, 1500, False
     i = 1
     while i < len(argv):
         if argv[i] == "--images":
@@ -303,16 +319,22 @@ def main(argv):
             use_browser = True; i += 1
         elif argv[i] == "--budget-seconds":
             budget = int(argv[i + 1]); i += 2
+        elif argv[i] == "--no-lists":
+            no_lists = True; i += 1
         elif argv[i] == "--max-products":
             max_products = int(argv[i + 1]); i += 2
         else:
             extra.append(argv[i]); i += 1
     res = {"date": datetime.date.today().isoformat(), "movers": {}, "bestsellers": {}, "products": {}}
-    for c in MOVERS:
+    if no_lists and os.path.exists(out):
+        old = json.load(open(out))
+        res["movers"], res["bestsellers"] = old.get("movers", {}), old.get("bestsellers", {})
+        res["lists_from"] = "earlier run today"
+    for c in ([] if no_lists else MOVERS):
         res["movers"][c or "all"] = fetch_list(f"/gp/movers-and-shakers/{c}/" if c else "/gp/movers-and-shakers/")
         print("movers", c or "all", res["movers"][c or "all"]["status"], len(res["movers"][c or "all"]["items"]))
         time.sleep(DELAY)
-    for c in BESTSELLERS:
+    for c in ([] if no_lists else BESTSELLERS):
         res["bestsellers"][c] = fetch_list(f"/gp/bestsellers/{c}/")
         print("bestsellers", c, res["bestsellers"][c]["status"], len(res["bestsellers"][c]["items"]))
         time.sleep(DELAY)
@@ -320,9 +342,9 @@ def main(argv):
     # then movers climbers, then best sellers round-robin by category
     queue = list(extra)
     for c in MOVERS:
-        for it in res["movers"][c or "all"]["items"][:10]:
+        for it in res["movers"].get(c or "all", {}).get("items", [])[:10]:
             queue.append(it["asin"])
-    cols = [[it["asin"] for it in res["bestsellers"][c]["items"][:12]] for c in BESTSELLERS]
+    cols = [[it["asin"] for it in res["bestsellers"].get(c, {}).get("items", [])[:12]] for c in BESTSELLERS]
     for row in range(12):
         for col in cols:
             if row < len(col):
@@ -332,9 +354,10 @@ def main(argv):
     if use_browser:
         try:
             start_browser()
-            print("browser started")
+            print("browser started", flush=True)
+            res["location_ok"] = BROWSER.get("location_ok")
         except Exception as e:
-            print("browser failed to start, falling back to plain requests:", e)
+            print("browser failed to start, falling back to plain requests:", e, flush=True)
     def save():
         os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
         with open(out, "w") as f:
