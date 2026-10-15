@@ -39,3 +39,17 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+  check:
+    # The cloud sandbox cannot reach the live site, so confirm the deploy from here.
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch the home page, the deals page and every product page
+        run: |
+          sleep 20
+          for path in "" "deals.html" $(cd products && for d in */; do echo "products/$d"; done); do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "https://finditcheaper.co.uk/$path")
+            echo "https://finditcheaper.co.uk/$path -> $code"
+            [ "$code" = "200" ] || exit 1
+          done
