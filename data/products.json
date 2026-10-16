@@ -1,430 +1,666 @@
 {
-  "site": {
-    "name": "Find It Cheaper",
-    "domain": "finditcheaper.co.uk",
-    "tagline": "Trending products in the UK, and where they're cheapest this week.",
-    "tiktok": "https://www.tiktok.com/@taxhype2027",
-    "amazon_tag": "taxhype-21"
+ "site": {
+  "name": "Find It Cheaper",
+  "domain": "finditcheaper.co.uk",
+  "tagline": "Trending products in the UK, and where they're cheapest this week.",
+  "tiktok": "https://www.tiktok.com/@taxhype2027",
+  "amazon_tag": "taxhype-21"
+ },
+ "weeks": [
+  {
+   "date": "2026-10-11",
+   "title": "5 things the UK is buying right now",
+   "video": "https://www.tiktok.com/@taxhype2027/video/7695533072627895574",
+   "products": [
+    "heated-throw",
+    "lumie-sunrise-alarm",
+    "karcher-wv1",
+    "medicube-pdrn-balm",
+    "shark-flexstyle"
+   ]
   },
-  "weeks": [
-    {
-      "date": "2026-10-11",
-      "title": "5 things the UK is buying right now",
-      "video": "https://www.tiktok.com/@taxhype2027/video/7695533072627895574",
-      "products": [
-        "heated-throw",
-        "lumie-sunrise-alarm",
-        "karcher-wv1",
-        "medicube-pdrn-balm",
-        "shark-flexstyle"
-      ]
-    },
-    {
-      "date": "2026-10-15",
-      "title": "10 more things the UK is buying this week",
-      "products": [
-        "medicube-zero-pore-pads",
-        "maybelline-sky-high-mascara",
-        "garnier-micellar-water-700ml",
-        "cerave-hydrating-cleanser",
-        "biodance-collagen-mask",
-        "brita-maxtra-pro-6-pack",
-        "oral-b-vitality-pro",
-        "maybelline-eraser-concealer",
-        "nizoral-shampoo-60ml",
-        "dreo-atom-316-heater"
-      ]
-    }
-  ],
-  "products": {
-    "heated-throw": {
-      "name": "Heated throw, 160 x 130cm",
-      "short": "Heated throw",
-      "image": "heated-throw.jpg",
-      "blurb": "The Amazon best seller. Ten heat settings, nine-hour timer, machine washable. A heated throw draws roughly 120 to 160 watts, so an evening on the sofa costs a few pence rather than putting the heating on.",
-      "badge": "6K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 25.49,
-          "was": 29.99,
-          "asin": "B0D8VHSJWN",
-          "note": "Limited time deal, 15% off"
-        },
-        {
-          "store": "Argos",
-          "price": 60.0,
-          "product": "Silentnight Luxury Heated Throw",
-          "url": "https://www.argos.co.uk/search/silentnight-heated-throw/",
-          "note": "Argos price last checked 11 October"
-        },
-        {
-          "store": "Amazon",
-          "price": 44.99,
-          "product": "Silentnight Comfort Control Heated Throw",
-          "asin": "B0FG3D7JFR"
-        }
-      ]
-    },
-    "lumie-sunrise-alarm": {
-      "name": "Lumie Sunrise Alarm",
-      "short": "Lumie Sunrise Alarm",
-      "image": "lumie.jpg",
-      "blurb": "The clocks go back on 25 October. A sunrise alarm brightens gradually for half an hour before the alarm, so you wake up in fake daylight instead of the dark. Lumie is the British brand that started the category.",
-      "badge": "3K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 39.99,
-          "was": 49.99,
-          "asin": "B07GB2MMK5",
-          "note": "20% off RRP"
-        },
-        {
-          "store": "Argos",
-          "price": 49.0,
-          "url": "https://www.argos.co.uk/search/lumie-sunrise-alarm/",
-          "note": "Argos price last checked 14 October"
-        }
-      ]
-    },
-    "karcher-wv1": {
-      "name": "Kärcher WV 1 window vac",
-      "short": "Kärcher window vac",
-      "image": "karcher.jpg",
-      "blurb": "Condensation season. Run it over the inside of the window in the morning and the water goes into the tank instead of down the wall and into the sealant. 20 minutes per charge, which does a whole house.",
-      "badge": "5K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 34.99,
-          "was": 44.99,
-          "asin": "B0CH3JRYX1",
-          "note": "22% off RRP"
-        },
-        {
-          "store": "Argos",
-          "price": 40.0,
-          "url": "https://www.argos.co.uk/search/karcher-wv1/",
-          "note": "Argos price last checked 11 October"
-        }
-      ]
-    },
-    "medicube-pdrn-balm": {
-      "name": "Medicube PDRN Collagen Volume Multi Balm Stick",
-      "short": "Medicube collagen balm",
-      "image": "medicube.jpg",
-      "blurb": "The most-bought skincare product on Amazon UK right now and the number one best seller in eye balms. A balm stick for under-eyes, smile lines, neck and lips. Korean brand, went viral on TikTok in the summer and hasn't slowed down. Superdrug lists the same 10g stick at £25.",
-      "badge": "40K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 16.39,
-          "was": 18.59,
-          "asin": "B0GHMZXX8Y",
-          "note": "#1 best seller in eye balms, 12% off RRP"
-        },
-        {
-          "store": "Superdrug",
-          "price": 25.0,
-          "product": "Medicube PDRN Pink Collagen Volume Multi Balm 10g",
-          "url": "https://www.superdrug.com/skin/face-skin-care/moisturising-lotions/medicube-pdrn-pink-collagen-volume-multi-balm-10g/p/mp-00527598",
-          "note": "Not available online when checked; Superdrug price last checked 12 October"
-        }
-      ],
-      "video": "https://www.tiktok.com/@taxhype2027"
-    },
-    "shark-flexstyle": {
-      "name": "Shark FlexStyle 5-in-1 Air Styler and Hair Dryer",
-      "short": "Shark FlexStyle",
-      "image": "shark.jpg",
-      "blurb": "The Dyson Airwrap alternative. Dries, curls with auto-wrap barrels, and has the oval brush and concentrator. Was £269.99 to £299.99 depending on the kit. Argos had it at £229.99 when we checked on 11 October, and Amazon has since gone back up to £259.98, so check Argos first.",
-      "badge": "1K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 259.98,
-          "was": 269.99,
-          "asin": "B0FMRYXSQG",
-          "note": "4% off RRP; was £229.99 on 11 October"
-        },
-        {
-          "store": "Argos",
-          "price": 229.99,
-          "was": 299.99,
-          "url": "https://www.argos.co.uk/search/shark-flexstyle/",
-          "note": "Argos price last checked 11 October"
-        }
-      ]
-    },
-    "oral-b-io2-duo": {
-      "name": "Oral-B iO2 Duo electric toothbrushes (2 handles, Night Black and Calm Pink)",
-      "short": "Oral-B iO2 Duo (2 brushes)",
-      "image": "oral-b-io2-duo.jpg",
-      "blurb": "Two Oral-B iO2 electric toothbrushes in one box, with two heads, a travel case and a refill holder. Pressure sensor, two minute timer and three quiet intensity settings, designed by Braun. Amazon has it on a limited time deal at £59.98 against a £160 RRP, while Boots lists the same Night Black and Calm Pink duo pack at £70 and Argos at £65.",
-      "badge": "3K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 59.98,
-          "was": 160.0,
-          "asin": "B0DNG1YCQN",
-          "note": "Limited time deal, 63% off RRP, sold by Amazon"
-        },
-        {
-          "store": "Boots",
-          "price": 70.0,
-          "was": 160.0,
-          "product": "Oral-B iO2 Electric Toothbrush Night Black and Calm Pink Duo Pack",
-          "url": "https://boots.com/oral-b-io2-electric-toothbrush-night-black-and-calm-pink-duo-pack-10356965",
-          "note": "Better than half price offer, in stock online; Boots price last checked 14 October"
-        },
-        {
-          "store": "Argos",
-          "price": 65.0,
-          "product": "Oral-B iO2 Duo Pack Electric Toothbrush Night Black/Pink",
-          "url": "https://www.argos.co.uk/product/4667456",
-          "note": "Argos says this is its lowest ever price; Argos price last checked 14 October"
-        }
-      ]
-    },
-    "medicube-zero-pore-pads": {
-      "name": "Medicube Zero Pore Pad 2.0 toner pads (70 pads)",
-      "short": "Medicube Zero Pore pads",
-      "image": "medicube-zero-pore-pads.jpg",
-      "blurb": "The number one best seller in Amazon UK's whole beauty category, with 100,000 bought in the past month. Seventy dual textured toner pads with lactic and salicylic acid that you swipe over the face after cleansing to clear pores and smooth texture. Superdrug lists the same 70 pad tub at £17.89.",
-      "badge": "100K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 15.3,
-          "was": 16.9,
-          "asin": "B09V7Z4TJG",
-          "note": "#1 best seller in beauty, 9% off RRP"
-        },
-        {
-          "store": "Superdrug",
-          "price": 17.89,
-          "product": "Medicube Zero Pore Pad 2.0 70pcs",
-          "url": "https://www.superdrug.com/skin/face-skin-care/toning-pads/medicube-zero-pore-pad-20-70pcs/p/857047",
-          "note": "3 for 2 on selected Medicube"
-        }
-      ]
-    },
-    "maybelline-sky-high-mascara": {
-      "name": "Maybelline Lash Sensational Sky High mascara, black",
-      "short": "Maybelline Sky High mascara",
-      "image": "maybelline-sky-high-mascara.jpg",
-      "blurb": "The mascara TikTok made famous, with a flexible bamboo extract wand that lengthens without clumping or flaking. 60,000 people bought it on Amazon in the past month and it is number two in beauty. Superdrug sells the same black 7.2ml tube at £12.99, so Amazon is close to half price.",
-      "badge": "60K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 8.11,
-          "was": 12.99,
-          "asin": "B08WR5CPNB",
-          "note": "38% off RRP"
-        },
-        {
-          "store": "Superdrug",
-          "price": 12.99,
-          "product": "Maybelline Lash Sensational Sky High Mascara 01 Black",
-          "url": "https://www.superdrug.com/make-up/eye-makeup/mascara/maybelline-lash-sensational-sky-high-mascara-01-black/p/801812",
-          "note": "3 for 2 on selected cosmetics"
-        }
-      ]
-    },
-    "garnier-micellar-water-700ml": {
-      "name": "Garnier Micellar Cleansing Water, 700ml",
-      "short": "Garnier Micellar Water 700ml",
-      "image": "garnier-micellar-water-700ml.jpg",
-      "blurb": "The big 700ml bottle of the UK's best selling micellar water, which takes off make up and cleanses without rinsing and suits sensitive skin. 70,000 people bought it on Amazon in the past month. Superdrug has a third off its £9.99 price this week, and Amazon is still a little cheaper.",
-      "badge": "70K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 6.47,
-          "was": 9.99,
-          "asin": "B01M6UUOY2",
-          "note": "35% off RRP"
-        },
-        {
-          "store": "Superdrug",
-          "price": 6.65,
-          "was": 9.99,
-          "product": "Garnier Micellar Water Sensitive Skin 700ml",
-          "url": "https://www.superdrug.com/skin/face-skin-care/micellar-water/garnier-micellar-water-sensitive-skin-700ml/p/716575",
-          "note": "Save a third on selected Garnier skincare"
-        }
-      ]
-    },
-    "cerave-hydrating-cleanser": {
-      "name": "CeraVe Hydrating Cleanser for normal to dry skin, 236ml",
-      "short": "CeraVe Hydrating Cleanser",
-      "image": "cerave-hydrating-cleanser.jpg",
-      "blurb": "The dermatologist favourite for normal to dry skin, with three ceramides and hyaluronic acid and no foaming agents to strip the skin. The 236ml pump bottle lasts for months, and 30,000 people bought one on Amazon in the past month. Superdrug lists the same bottle at £12.49.",
-      "badge": "30K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 9.37,
-          "was": 12.5,
-          "asin": "B07C5R51Q9",
-          "note": "25% off RRP, sold by Amazon"
-        },
-        {
-          "store": "Superdrug",
-          "price": 12.49,
-          "product": "CeraVe Hydrating Cleanser with Hyaluronic Acid for Dry Skin 236ml",
-          "url": "https://www.superdrug.com/skin/face-wash/cerave-hydrating-cleanser-with-hyaluronic-acid-for-dry-skin-236ml/p/769990",
-          "note": "Buy one get second half price on selected CeraVe"
-        }
-      ]
-    },
-    "biodance-collagen-mask": {
-      "name": "BIODANCE Bio-Collagen Real Deep overnight mask (4 sheets)",
-      "short": "BIODANCE collagen mask",
-      "image": "biodance-collagen-mask.jpg",
-      "blurb": "The viral overnight hydrogel mask that goes on cloudy and turns clear as the collagen soaks in over three to four hours. A box of four sheets, and 40,000 people bought it on Amazon in the past month. Superdrug has the same four pack at £14.89.",
-      "badge": "40K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 11.99,
-          "was": 14.9,
-          "asin": "B0B2RM68G2",
-          "note": "20% off RRP"
-        },
-        {
-          "store": "Superdrug",
-          "price": 14.89,
-          "product": "Biodance Bio Collagen Real Deep Mask 34g 4pk",
-          "url": "https://www.superdrug.com/skin/face-skin-care/face-masks/face-masks-sheets/biodance-bio-collagen-real-deep-mask-34g-4pk/p/857128"
-        }
-      ]
-    },
-    "brita-maxtra-pro-6-pack": {
-      "name": "BRITA MAXTRA PRO Pure Performance filter cartridges, 6 pack",
-      "short": "BRITA MAXTRA PRO 6 pack",
-      "image": "brita-maxtra-pro-6-pack.jpg",
-      "blurb": "Six genuine BRITA MAXTRA PRO cartridges, which is six months of filtered water in any current BRITA jug. 20,000 people bought this pack on Amazon in the past month. Currys lists the same six pack at £34.99, more than £10 dearer.",
-      "badge": "20K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 24.5,
-          "was": 37.49,
-          "asin": "B0BSXDVQG7",
-          "note": "35% off RRP, sold by Amazon"
-        },
-        {
-          "store": "Currys",
-          "price": 34.99,
-          "product": "BRITA MAXTRA PRO 1053089 Water Filter Cartridge, pack of 6",
-          "url": "https://www.currys.co.uk/products/brita-maxtra-pro-1053089-water-filter-cartridge-pack-of-6-10258603.html"
-        }
-      ]
-    },
-    "oral-b-vitality-pro": {
-      "name": "Oral-B Vitality Pro electric toothbrush, black (2 heads)",
-      "short": "Oral-B Vitality Pro",
-      "image": "oral-b-vitality-pro.jpg",
-      "blurb": "Oral-B's entry level rechargeable toothbrush, with a two minute timer, three brushing modes including sensitive and two round heads in the box. It is the number one best seller in rotating toothbrushes on Amazon, with 10,000 bought in the past month. Currys has the same black Vitality Pro at £29.99.",
-      "badge": "10K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 21.0,
-          "was": 49.99,
-          "asin": "B0B18V92KS",
-          "note": "58% off RRP, #1 best seller in rotating toothbrushes"
-        },
-        {
-          "store": "Currys",
-          "price": 29.99,
-          "was": 34.99,
-          "product": "ORAL-B Vitality Pro Electric Toothbrush, Black",
-          "url": "https://www.currys.co.uk/products/oralb-vitality-pro-electric-toothbrush-black-10243410.html"
-        }
-      ]
-    },
-    "maybelline-eraser-concealer": {
-      "name": "Maybelline Instant Anti Age Eraser eye concealer, 01 Light",
-      "short": "Maybelline Eraser concealer",
-      "image": "maybelline-eraser-concealer.jpg",
-      "blurb": "The sponge tip concealer for dark circles that has sat in the best seller lists for over a decade, in shade 01 Light. 10,000 people bought it on Amazon in the past month. Superdrug has it on offer at £7.99, down from £9.99, and Amazon is a pound cheaper again.",
-      "badge": "10K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 6.99,
-          "was": 10.0,
-          "asin": "B00JR76TKW",
-          "note": "30% off RRP"
-        },
-        {
-          "store": "Superdrug",
-          "price": 7.99,
-          "was": 9.99,
-          "product": "Maybelline Instant Anti Age Eraser Eye Concealer (Light)",
-          "url": "https://www.superdrug.com/make-up/face/concealer/maybelline-instant-anti-age-eraser-eye-concealer-light/p/654050",
-          "note": "Save 20% on selected Maybelline face make up, online only"
-        }
-      ]
-    },
-    "nizoral-shampoo-60ml": {
-      "name": "Nizoral Anti-Dandruff Shampoo, 60ml",
-      "short": "Nizoral shampoo 60ml",
-      "image": "nizoral-shampoo-60ml.jpg",
-      "blurb": "The pharmacy strength anti dandruff shampoo with 2% ketoconazole, used twice a week to clear flakes and then once a fortnight to keep them away. 40,000 people bought it on Amazon in the past month. Superdrug sells the same 60ml bottle at £8.49.",
-      "badge": "40K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 6.67,
-          "was": 8.99,
-          "asin": "B001ETUD5I",
-          "note": "26% off RRP"
-        },
-        {
-          "store": "Superdrug",
-          "price": 8.49,
-          "product": "Nizoral Anti-dandruff Shampoo 60ml",
-          "url": "https://www.superdrug.com/hair/shampoo/anti-dandruff-shampoo/nizoral-anti-dandruff-shampoo-60ml/p/397539"
-        }
-      ]
-    },
-    "dreo-atom-316-heater": {
-      "name": "Dreo Atom 316 1500W ceramic fan heater with remote",
-      "short": "Dreo Atom 316 heater",
-      "image": "dreo-atom-316-heater.jpg",
-      "blurb": "A 1500W ceramic fan heater with a remote, a 12 hour timer and a thermostat that switches it off once the room is warm, so it heats one room instead of the whole house. 5,000 people bought one on Amazon in the past month. Amazon has it on a deal that ends tonight; no high street price could be checked for this exact model, so this one is a was and now deal.",
-      "badge": "5K+ bought this month",
-      "checked": "2026-10-15",
-      "prices": [
-        {
-          "store": "Amazon",
-          "price": 39.99,
-          "was": 49.99,
-          "asin": "B0C9D4KL9D",
-          "note": "Deal ends tonight, 15 October, at about 11.45pm UK time, while promotional stock lasts"
-        }
-      ]
-    }
+  {
+   "date": "2026-10-15",
+   "title": "10 more things the UK is buying this week",
+   "products": [
+    "medicube-zero-pore-pads",
+    "maybelline-sky-high-mascara",
+    "garnier-micellar-water-700ml",
+    "cerave-hydrating-cleanser",
+    "biodance-collagen-mask",
+    "brita-maxtra-pro-6-pack",
+    "oral-b-vitality-pro",
+    "maybelline-eraser-concealer",
+    "nizoral-shampoo-60ml",
+    "dreo-atom-316-heater"
+   ]
+  },
+  {
+   "date": "2026-10-16",
+   "title": "10 trending UK buys, checked 16 October",
+   "products": [
+    "medicube-collagen-jelly-cream",
+    "garnier-hair-food-banana-400ml",
+    "eylure-dybrow-dark-brown",
+    "clairol-nice-n-easy-4-dark-brown",
+    "rimmel-60-seconds-clear",
+    "sudafed-blocked-nose-spray",
+    "vitabiotics-ultra-vitamin-d3-96",
+    "fireangel-fa6813-co-alarm",
+    "dr-beckmann-washing-machine-cleaner",
+    "gorilla-super-glue-15g"
+   ]
   }
+ ],
+ "products": {
+  "heated-throw": {
+   "name": "Heated throw, 160 x 130cm",
+   "short": "Heated throw",
+   "image": "heated-throw.jpg",
+   "blurb": "The Amazon best seller. Ten heat settings, nine hour timer, machine washable. A heated throw draws roughly 120 to 160 watts, so an evening on the sofa costs a few pence rather than putting the heating on.",
+   "badge": "6K+ bought this month",
+   "checked": "2026-10-16",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 25.49,
+     "was": 29.99,
+     "asin": "B0D8VHSJWN",
+     "note": "Limited time deal, 15% off, still on 16 October"
+    },
+    {
+     "store": "Argos",
+     "price": 60.0,
+     "product": "Silentnight Luxury Heated Throw",
+     "url": "https://www.argos.co.uk/search/silentnight-heated-throw/",
+     "note": "Argos price last checked 11 October"
+    },
+    {
+     "store": "Amazon",
+     "price": 44.99,
+     "product": "Silentnight Comfort Control Heated Throw",
+     "asin": "B0FG3D7JFR"
+    }
+   ]
+  },
+  "lumie-sunrise-alarm": {
+   "name": "Lumie Sunrise Alarm",
+   "short": "Lumie Sunrise Alarm",
+   "image": "lumie.jpg",
+   "blurb": "The clocks go back on 25 October. A sunrise alarm brightens gradually for half an hour before the alarm, so you wake up in fake daylight instead of the dark. Lumie is the British brand that started the category.",
+   "badge": "3K+ bought this month",
+   "checked": "2026-10-15",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 39.99,
+     "was": 49.99,
+     "asin": "B07GB2MMK5",
+     "note": "20% off RRP"
+    },
+    {
+     "store": "Argos",
+     "price": 49.0,
+     "url": "https://www.argos.co.uk/search/lumie-sunrise-alarm/",
+     "note": "Argos price last checked 14 October"
+    }
+   ]
+  },
+  "karcher-wv1": {
+   "name": "Kärcher WV 1 window vac",
+   "short": "Kärcher window vac",
+   "image": "karcher.jpg",
+   "blurb": "Condensation season. Run it over the inside of the window in the morning and the water goes into the tank instead of down the wall and into the sealant. 20 minutes per charge, which does a whole house.",
+   "badge": "5K+ bought this month",
+   "checked": "2026-10-15",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 34.99,
+     "was": 44.99,
+     "asin": "B0CH3JRYX1",
+     "note": "22% off RRP"
+    },
+    {
+     "store": "Argos",
+     "price": 40.0,
+     "url": "https://www.argos.co.uk/search/karcher-wv1/",
+     "note": "Argos price last checked 11 October"
+    }
+   ]
+  },
+  "medicube-pdrn-balm": {
+   "name": "Medicube PDRN Collagen Volume Multi Balm Stick",
+   "short": "Medicube collagen balm",
+   "image": "medicube.jpg",
+   "blurb": "The most-bought skincare product on Amazon UK right now and the number one best seller in eye balms. A balm stick for under-eyes, smile lines, neck and lips. Korean brand, went viral on TikTok in the summer and hasn't slowed down. Superdrug lists the same 10g stick at £25.",
+   "badge": "40K+ bought this month",
+   "checked": "2026-10-15",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 16.39,
+     "was": 18.59,
+     "asin": "B0GHMZXX8Y",
+     "note": "#1 best seller in eye balms, 12% off RRP"
+    },
+    {
+     "store": "Superdrug",
+     "price": 25.0,
+     "product": "Medicube PDRN Pink Collagen Volume Multi Balm 10g",
+     "url": "https://www.superdrug.com/skin/face-skin-care/moisturising-lotions/medicube-pdrn-pink-collagen-volume-multi-balm-10g/p/mp-00527598",
+     "note": "Not available online when checked; Superdrug price last checked 12 October"
+    }
+   ],
+   "video": "https://www.tiktok.com/@taxhype2027"
+  },
+  "shark-flexstyle": {
+   "name": "Shark FlexStyle 5-in-1 Air Styler and Hair Dryer",
+   "short": "Shark FlexStyle",
+   "image": "shark.jpg",
+   "blurb": "The Dyson Airwrap alternative. Dries, curls with auto-wrap barrels, and has the oval brush and concentrator. Was £269.99 to £299.99 depending on the kit. Argos had it at £229.99 when we checked on 11 October, and Amazon has since gone back up to £259.98, so check Argos first.",
+   "badge": "1K+ bought this month",
+   "checked": "2026-10-15",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 259.98,
+     "was": 269.99,
+     "asin": "B0FMRYXSQG",
+     "note": "4% off RRP; was £229.99 on 11 October"
+    },
+    {
+     "store": "Argos",
+     "price": 229.99,
+     "was": 299.99,
+     "url": "https://www.argos.co.uk/search/shark-flexstyle/",
+     "note": "Argos price last checked 11 October"
+    }
+   ]
+  },
+  "oral-b-io2-duo": {
+   "name": "Oral-B iO2 Duo electric toothbrushes (2 handles, Night Black and Calm Pink)",
+   "short": "Oral-B iO2 Duo (2 brushes)",
+   "image": "oral-b-io2-duo.jpg",
+   "blurb": "Two Oral-B iO2 electric toothbrushes in one box, with two heads, a travel case and a refill holder. Pressure sensor, two minute timer and three quiet intensity settings, designed by Braun. Amazon has it on a limited time deal at £59.98 against a £160 RRP, while Boots lists the same Night Black and Calm Pink duo pack at £70 and Argos at £65.",
+   "badge": "3K+ bought this month",
+   "checked": "2026-10-16",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 59.98,
+     "was": 160.0,
+     "asin": "B0DNG1YCQN",
+     "note": "Limited time deal, 63% off RRP, sold by Amazon, still on 16 October"
+    },
+    {
+     "store": "Boots",
+     "price": 70.0,
+     "was": 160.0,
+     "product": "Oral-B iO2 Electric Toothbrush Night Black and Calm Pink Duo Pack",
+     "url": "https://boots.com/oral-b-io2-electric-toothbrush-night-black-and-calm-pink-duo-pack-10356965",
+     "note": "Better than half price offer, in stock online; Boots price last checked 14 October"
+    },
+    {
+     "store": "Argos",
+     "price": 65.0,
+     "product": "Oral-B iO2 Duo Pack Electric Toothbrush Night Black/Pink",
+     "url": "https://www.argos.co.uk/product/4667456",
+     "note": "Argos says this is its lowest ever price; Argos price last checked 14 October"
+    }
+   ]
+  },
+  "medicube-zero-pore-pads": {
+   "name": "Medicube Zero Pore Pad 2.0 toner pads (70 pads)",
+   "short": "Medicube Zero Pore pads",
+   "image": "medicube-zero-pore-pads.jpg",
+   "blurb": "The number one best seller in Amazon UK's whole beauty category, with 100,000 bought in the past month. Seventy dual textured toner pads with lactic and salicylic acid that you swipe over the face after cleansing to clear pores and smooth texture. Superdrug lists the same 70 pad tub at £17.89.",
+   "badge": "100K+ bought this month",
+   "checked": "2026-10-15",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 15.3,
+     "was": 16.9,
+     "asin": "B09V7Z4TJG",
+     "note": "#1 best seller in beauty, 9% off RRP"
+    },
+    {
+     "store": "Superdrug",
+     "price": 17.89,
+     "product": "Medicube Zero Pore Pad 2.0 70pcs",
+     "url": "https://www.superdrug.com/skin/face-skin-care/toning-pads/medicube-zero-pore-pad-20-70pcs/p/857047",
+     "note": "3 for 2 on selected Medicube"
+    }
+   ]
+  },
+  "maybelline-sky-high-mascara": {
+   "name": "Maybelline Lash Sensational Sky High mascara, black",
+   "short": "Maybelline Sky High mascara",
+   "image": "maybelline-sky-high-mascara.jpg",
+   "blurb": "The mascara TikTok made famous, with a flexible bamboo extract wand that lengthens without clumping or flaking. 60,000 people bought it on Amazon in the past month and it is number two in beauty. Superdrug sells the same black 7.2ml tube at £12.99, so Amazon is close to half price.",
+   "badge": "60K+ bought this month",
+   "checked": "2026-10-15",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 8.11,
+     "was": 12.99,
+     "asin": "B08WR5CPNB",
+     "note": "38% off RRP"
+    },
+    {
+     "store": "Superdrug",
+     "price": 12.99,
+     "product": "Maybelline Lash Sensational Sky High Mascara 01 Black",
+     "url": "https://www.superdrug.com/make-up/eye-makeup/mascara/maybelline-lash-sensational-sky-high-mascara-01-black/p/801812",
+     "note": "3 for 2 on selected cosmetics"
+    }
+   ]
+  },
+  "garnier-micellar-water-700ml": {
+   "name": "Garnier Micellar Cleansing Water, 700ml",
+   "short": "Garnier Micellar Water 700ml",
+   "image": "garnier-micellar-water-700ml.jpg",
+   "blurb": "The big 700ml bottle of the UK's best selling micellar water, which takes off make up and cleanses without rinsing and suits sensitive skin. 70,000 people bought it on Amazon in the past month. Superdrug has a third off its £9.99 price this week, and Amazon is still a little cheaper.",
+   "badge": "70K+ bought this month",
+   "checked": "2026-10-15",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 6.47,
+     "was": 9.99,
+     "asin": "B01M6UUOY2",
+     "note": "35% off RRP"
+    },
+    {
+     "store": "Superdrug",
+     "price": 6.65,
+     "was": 9.99,
+     "product": "Garnier Micellar Water Sensitive Skin 700ml",
+     "url": "https://www.superdrug.com/skin/face-skin-care/micellar-water/garnier-micellar-water-sensitive-skin-700ml/p/716575",
+     "note": "Save a third on selected Garnier skincare"
+    }
+   ]
+  },
+  "cerave-hydrating-cleanser": {
+   "name": "CeraVe Hydrating Cleanser for normal to dry skin, 236ml",
+   "short": "CeraVe Hydrating Cleanser",
+   "image": "cerave-hydrating-cleanser.jpg",
+   "blurb": "The dermatologist favourite for normal to dry skin, with three ceramides and hyaluronic acid and no foaming agents to strip the skin. The 236ml pump bottle lasts for months, and 30,000 people bought one on Amazon in the past month. Superdrug lists the same bottle at £12.49.",
+   "badge": "30K+ bought this month",
+   "checked": "2026-10-15",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 9.37,
+     "was": 12.5,
+     "asin": "B07C5R51Q9",
+     "note": "25% off RRP, sold by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 12.49,
+     "product": "CeraVe Hydrating Cleanser with Hyaluronic Acid for Dry Skin 236ml",
+     "url": "https://www.superdrug.com/skin/face-wash/cerave-hydrating-cleanser-with-hyaluronic-acid-for-dry-skin-236ml/p/769990",
+     "note": "Buy one get second half price on selected CeraVe"
+    }
+   ]
+  },
+  "biodance-collagen-mask": {
+   "name": "BIODANCE Bio-Collagen Real Deep overnight mask (4 sheets)",
+   "short": "BIODANCE collagen mask",
+   "image": "biodance-collagen-mask.jpg",
+   "blurb": "The viral overnight hydrogel mask that goes on cloudy and turns clear as the collagen soaks in over three to four hours. A box of four sheets, and 40,000 people bought it on Amazon in the past month. Superdrug has the same four pack at £14.89.",
+   "badge": "40K+ bought this month",
+   "checked": "2026-10-15",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 11.99,
+     "was": 14.9,
+     "asin": "B0B2RM68G2",
+     "note": "20% off RRP"
+    },
+    {
+     "store": "Superdrug",
+     "price": 14.89,
+     "product": "Biodance Bio Collagen Real Deep Mask 34g 4pk",
+     "url": "https://www.superdrug.com/skin/face-skin-care/face-masks/face-masks-sheets/biodance-bio-collagen-real-deep-mask-34g-4pk/p/857128"
+    }
+   ]
+  },
+  "brita-maxtra-pro-6-pack": {
+   "name": "BRITA MAXTRA PRO Pure Performance filter cartridges, 6 pack",
+   "short": "BRITA MAXTRA PRO 6 pack",
+   "image": "brita-maxtra-pro-6-pack.jpg",
+   "blurb": "Six genuine BRITA MAXTRA PRO cartridges, which is six months of filtered water in any current BRITA jug. 20,000 people bought this pack on Amazon in the past month. Currys lists the same six pack at £34.99, more than £10 dearer.",
+   "badge": "20K+ bought this month",
+   "checked": "2026-10-15",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 24.5,
+     "was": 37.49,
+     "asin": "B0BSXDVQG7",
+     "note": "35% off RRP, sold by Amazon"
+    },
+    {
+     "store": "Currys",
+     "price": 34.99,
+     "product": "BRITA MAXTRA PRO 1053089 Water Filter Cartridge, pack of 6",
+     "url": "https://www.currys.co.uk/products/brita-maxtra-pro-1053089-water-filter-cartridge-pack-of-6-10258603.html"
+    }
+   ]
+  },
+  "oral-b-vitality-pro": {
+   "name": "Oral-B Vitality Pro electric toothbrush, black (2 heads)",
+   "short": "Oral-B Vitality Pro",
+   "image": "oral-b-vitality-pro.jpg",
+   "blurb": "Oral-B's entry level rechargeable toothbrush, with a two minute timer, three brushing modes including sensitive and two round heads in the box. It is the number one best seller in rotating toothbrushes on Amazon, with 10,000 bought in the past month. Currys has the same black Vitality Pro at £29.99.",
+   "badge": "10K+ bought this month",
+   "checked": "2026-10-15",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 21.0,
+     "was": 49.99,
+     "asin": "B0B18V92KS",
+     "note": "58% off RRP, #1 best seller in rotating toothbrushes"
+    },
+    {
+     "store": "Currys",
+     "price": 29.99,
+     "was": 34.99,
+     "product": "ORAL-B Vitality Pro Electric Toothbrush, Black",
+     "url": "https://www.currys.co.uk/products/oralb-vitality-pro-electric-toothbrush-black-10243410.html"
+    }
+   ]
+  },
+  "maybelline-eraser-concealer": {
+   "name": "Maybelline Instant Anti Age Eraser eye concealer, 01 Light",
+   "short": "Maybelline Eraser concealer",
+   "image": "maybelline-eraser-concealer.jpg",
+   "blurb": "The sponge tip concealer for dark circles that has sat in the best seller lists for over a decade, in shade 01 Light. 10,000 people bought it on Amazon in the past month. Superdrug has it on offer at £7.99, down from £9.99, and Amazon is a pound cheaper again.",
+   "badge": "10K+ bought this month",
+   "checked": "2026-10-15",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 6.99,
+     "was": 10.0,
+     "asin": "B00JR76TKW",
+     "note": "30% off RRP"
+    },
+    {
+     "store": "Superdrug",
+     "price": 7.99,
+     "was": 9.99,
+     "product": "Maybelline Instant Anti Age Eraser Eye Concealer (Light)",
+     "url": "https://www.superdrug.com/make-up/face/concealer/maybelline-instant-anti-age-eraser-eye-concealer-light/p/654050",
+     "note": "Save 20% on selected Maybelline face make up, online only"
+    }
+   ]
+  },
+  "nizoral-shampoo-60ml": {
+   "name": "Nizoral Anti-Dandruff Shampoo, 60ml",
+   "short": "Nizoral shampoo 60ml",
+   "image": "nizoral-shampoo-60ml.jpg",
+   "blurb": "The pharmacy strength anti dandruff shampoo with 2% ketoconazole, used twice a week to clear flakes and then once a fortnight to keep them away. 40,000 people bought it on Amazon in the past month. Superdrug sells the same 60ml bottle at £8.49.",
+   "badge": "40K+ bought this month",
+   "checked": "2026-10-15",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 6.67,
+     "was": 8.99,
+     "asin": "B001ETUD5I",
+     "note": "26% off RRP"
+    },
+    {
+     "store": "Superdrug",
+     "price": 8.49,
+     "product": "Nizoral Anti-dandruff Shampoo 60ml",
+     "url": "https://www.superdrug.com/hair/shampoo/anti-dandruff-shampoo/nizoral-anti-dandruff-shampoo-60ml/p/397539"
+    }
+   ]
+  },
+  "dreo-atom-316-heater": {
+   "name": "Dreo Atom 316 1500W ceramic fan heater with remote",
+   "short": "Dreo Atom 316 heater",
+   "image": "dreo-atom-316-heater.jpg",
+   "blurb": "A 1500W ceramic fan heater with a remote, a 12 hour timer and a thermostat that switches it off once the room is warm, so it heats one room instead of the whole house. 5,000 people bought one on Amazon in the past month. The £39.99 deal ended on 15 October and it is back to £49.99 new; Amazon Resale had a used, like new one at £39.59 when we checked.",
+   "badge": "5K+ bought this month",
+   "checked": "2026-10-16",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 49.99,
+     "asin": "B0C9D4KL9D",
+     "note": "Deal ended; back to £49.99 when checked 16 October. Amazon Resale had a used, like new one at £39.59"
+    }
+   ]
+  },
+  "medicube-collagen-jelly-cream": {
+   "name": "Medicube Collagen Jelly Cream 110ml",
+   "short": "Medicube Collagen Jelly Cream",
+   "image": "medicube-collagen-jelly-cream.jpg",
+   "blurb": "The viral Korean jelly cream with freeze dried collagen and niacinamide, in the full 110ml tub. 40,000 people bought it on Amazon in the past month, where the official Medicube store has it at £16.80. Boots stocks the same 110ml tub at £26, so Amazon is £9.20 cheaper today.",
+   "badge": "40K+ bought this month",
+   "checked": "2026-10-16",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 16.8,
+     "was": 17.9,
+     "asin": "B0CM2PPNMW",
+     "note": "6% off RRP, sold by Medicube Official"
+    },
+    {
+     "store": "Boots",
+     "price": 26.0,
+     "url": "https://boots.com/medicube-collagen-jelly-cream-110ml-10361908",
+     "note": "In stock online"
+    }
+   ]
+  },
+  "garnier-hair-food-banana-400ml": {
+   "name": "Garnier Hair Food Banana 3 in 1 hair mask 400ml",
+   "short": "Garnier Hair Food Banana",
+   "image": "garnier-hair-food-banana-400ml.jpg",
+   "blurb": "A 3 in 1 banana hair mask you can use as a conditioner, a mask or a leave in treatment for dry hair. Amazon has the 400ml tub at £4, half its £7.99 RRP, and 10,000 people bought one in the past month. Superdrug's 390ml tub is £8.99, or £4.49 if you have a Health & Beautycard, so Amazon is cheaper either way.",
+   "badge": "10K+ bought this month",
+   "checked": "2026-10-16",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 4.0,
+     "was": 7.99,
+     "asin": "B07L5WGS2X",
+     "note": "50% off RRP, sold by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 8.99,
+     "url": "https://www.superdrug.com/hair/hair-treatments/hair-masks/garnier-ultimate-blends-hair-food-banana-hair-mask-390ml/p/775729",
+     "product": "390ml tub",
+     "note": "Health & Beautycard members pay £4.49"
+    }
+   ]
+  },
+  "eylure-dybrow-dark-brown": {
+   "name": "Eylure Dybrow eyebrow dye kit, Dark Brown",
+   "short": "Eylure Dybrow Dark Brown",
+   "image": "eylure-dybrow-dark-brown.jpg",
+   "blurb": "The home eyebrow tint kit that lasts up to six weeks, in the Dark Brown shade. 20,000 people bought one on Amazon in the past month at £7.49, a little under the £8 RRP. Superdrug has the same kit at £9, so Amazon saves you £1.51.",
+   "badge": "20K+ bought this month",
+   "checked": "2026-10-16",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 7.49,
+     "was": 8.0,
+     "asin": "B000SDQ224",
+     "note": "6% off RRP, sold by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 9.0,
+     "url": "https://www.superdrug.com/make-up/eye-makeup/eyebrows/eyebrow-dye-and-tinting/eylure-dybrow-dark-brown-permanent-eyebrow-tint-5ml/p/46466",
+     "note": "Buy one get a second half price on selected Superdrug beauty accessories"
+    }
+   ]
+  },
+  "clairol-nice-n-easy-4-dark-brown": {
+   "name": "Clairol Nice'n Easy Crème permanent hair dye, 4 Dark Brown",
+   "short": "Clairol Nice'n Easy 4 Dark Brown",
+   "image": "clairol-nice-n-easy-4-dark-brown.jpg",
+   "blurb": "Clairol's permanent crème dye with full grey coverage, in shade 4 Dark Brown. Amazon has it at £6, down from a £6.68 was price, and 3,000 people bought one in the past month. Superdrug sells every Nice'n Easy shade at £7.99, or two for £12, so a single box is £1.99 cheaper on Amazon.",
+   "badge": "3K+ bought this month",
+   "checked": "2026-10-16",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 6.0,
+     "was": 6.68,
+     "asin": "B07895R49B",
+     "note": "10% off the was price, sold by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 7.99,
+     "url": "https://www.superdrug.com/hair/hair-colourants/permanent-hair-dye/clairol-nicen-easy-creme-permanent-hair-dye-4-dark-brown/p/751376",
+     "note": "2 for £12 on selected Nice'n Easy"
+    }
+   ]
+  },
+  "rimmel-60-seconds-clear": {
+   "name": "Rimmel 60 Seconds Super Shine nail polish, 740 Clear 8ml",
+   "short": "Rimmel 60 Seconds Clear",
+   "image": "rimmel-60-seconds-clear.jpg",
+   "blurb": "The quick dry clear top coat that 4,000 people bought on Amazon in the past month. Amazon has it at £3.38 against a £3.98 was price, sold by a marketplace seller but dispatched by Amazon. Superdrug has it at £3.99 with 3 for 2 on cosmetics, so Amazon wins on a single bottle and Superdrug wins if you want three.",
+   "badge": "4K+ bought this month",
+   "checked": "2026-10-16",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 3.38,
+     "was": 3.98,
+     "asin": "B00UYJGYCK",
+     "note": "15% off the was price, sold by AVA SUPPLIES and dispatched by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 3.99,
+     "url": "https://www.superdrug.com/make-up/nails/nail-polish/gloss-nail-polish/rimmel-nail-polish-60-second-clear-8ml/p/410501",
+     "note": "3 for 2 on selected cosmetics"
+    }
+   ]
+  },
+  "sudafed-blocked-nose-spray": {
+   "name": "Sudafed Blocked Nose Spray 15ml",
+   "short": "Sudafed Blocked Nose Spray",
+   "image": "sudafed-blocked-nose-spray.jpg",
+   "blurb": "The decongestant nasal spray for colds and allergies, 15ml, which 30,000 people bought on Amazon in the past month as cold season starts. Amazon has it at £4.47 against a £6.05 RRP. Superdrug has it on offer at £4.69, down from £5.19, so the gap is only 22p today.",
+   "badge": "30K+ bought this month",
+   "checked": "2026-10-16",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 4.47,
+     "was": 6.05,
+     "asin": "B004RDYI04",
+     "note": "26% off RRP, sold by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 4.69,
+     "was": 5.19,
+     "url": "https://www.superdrug.com/health/cough-cold-flu/cold-remedies/nasal-spray/sudafed-blocked-nose-nasal-spray-15ml/p/223400",
+     "note": "Save up to 15% on selected Sudafed"
+    }
+   ]
+  },
+  "vitabiotics-ultra-vitamin-d3-96": {
+   "name": "Vitabiotics Ultra Vitamin D3 1000IU, 96 tablets",
+   "short": "Vitabiotics Ultra Vitamin D3",
+   "image": "vitabiotics-ultra-vitamin-d3-96.jpg",
+   "blurb": "A 96 day supply of 1000IU vitamin D3, the dose the NHS suggests everyone considers through autumn and winter. 10,000 people bought it on Amazon in the past month at £4.92, a fifth off the £6.15 RRP. Superdrug has the same 96 pack at £5.39 with 3 for 2 on vitamins, so Amazon is 47p cheaper on a single pack.",
+   "badge": "10K+ bought this month",
+   "checked": "2026-10-16",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 4.92,
+     "was": 6.15,
+     "asin": "B003VQZC3U",
+     "note": "20% off RRP, sold by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 5.39,
+     "url": "https://www.superdrug.com/health/vitamins-supplements/vitamin-d/vitabiotics-ultra-vitamin-d-96-tablets/p/515451",
+     "note": "3 for 2 on selected vitamins"
+    }
+   ]
+  },
+  "fireangel-fa6813-co-alarm": {
+   "name": "FireAngel FA6813 carbon monoxide alarm, 10 year sensor",
+   "short": "FireAngel FA6813 CO alarm",
+   "image": "fireangel-fa6813-co-alarm.jpg",
+   "blurb": "A battery powered carbon monoxide alarm with a 10 year sensor, the kind of thing worth having before the boiler goes back on. 5,000 people bought one on Amazon in the past month. Amazon has it on a limited time deal at £13.98 against a £17.99 RRP, and Currys has it at £13.99, down from £16.49, so the two are a penny apart today.",
+   "badge": "5K+ bought this month",
+   "checked": "2026-10-16",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 13.98,
+     "was": 17.99,
+     "asin": "B0CKWGSX22",
+     "note": "Limited time deal, 22% off RRP, while promotional stock lasts"
+    },
+    {
+     "store": "Currys",
+     "price": 13.99,
+     "was": 16.49,
+     "url": "https://www.currys.co.uk/products/fireangel-fa6813eux10-carbon-monoxide-alarm-white-10296587.html",
+     "note": "Save £2.50"
+    }
+   ]
+  },
+  "dr-beckmann-washing-machine-cleaner": {
+   "name": "Dr. Beckmann Service-it Deep Clean washing machine cleaner 250g",
+   "short": "Dr. Beckmann washing machine cleaner",
+   "image": "dr-beckmann-washing-machine-cleaner.jpg",
+   "blurb": "The number one seller in Amazon's whole Home & Kitchen category: a single use powder that cleans the drum, seal and pipes of a washing machine. 50,000 people bought one in the past month. Amazon has it at £2 against a £3.49 RRP; no high street price could be checked for it today, so this one is a was and now deal.",
+   "badge": "50K+ bought this month",
+   "checked": "2026-10-16",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 2.0,
+     "was": 3.49,
+     "asin": "B0080ZSQKS",
+     "note": "43% off RRP, #1 best seller in Home & Kitchen, sold by Amazon"
+    }
+   ]
+  },
+  "gorilla-super-glue-15g": {
+   "name": "Gorilla Super Glue 15g",
+   "short": "Gorilla Super Glue 15g",
+   "image": "gorilla-super-glue-15g.jpg",
+   "blurb": "The impact tough super glue with an anti clog cap, in the 15g bottle. It is the number one seller in super glue on Amazon, with 10,000 bought in the past month. Amazon has it at £5.75, nearly half the £10.79 RRP; no high street price could be checked for it today, so this one is a was and now deal.",
+   "badge": "10K+ bought this month",
+   "checked": "2026-10-16",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 5.75,
+     "was": 10.79,
+     "asin": "B003CT4XT0",
+     "note": "47% off RRP, #1 best seller in super glue, sold by Amazon"
+    }
+   ]
+  }
+ }
 }

@@ -31,3 +31,35 @@ Best seller lists did load, so the "bought in past month" counts are today's sig
 - Hot Hands 5 pairs, B08GCT8SXZ, £3.00 (RRP £4.99), 7K+ bought. Boots page would not give a price. Not added.
 
 VIDEO CANDIDATE (by price gap rather than a Movers & Shakers climb): Maybelline Sky High £8.11 vs Superdrug £12.99 (60K+ bought), or BRITA MAXTRA PRO £24.50 vs Currys £34.99 (20K+ bought). Both Amazon prices must be re-read on the evening run.
+
+## 16 Oct 2026
+
+Checked from the GitHub Actions runner (Scrape Amazon run 8, 05:54 to 06:02 UTC, London delivery address set, prices in GBP). The main Movers & Shakers page and all nine category pages (beauty, kitchen, drugstore, home-garden, electronics, diy, lighting, sports, pet-supplies) loaded but listed no products, as on 15 Oct. No climbers recorded, no video candidate from Movers & Shakers today.
+
+Best seller lists loaded for beauty, kitchen, home-garden, lighting, electronics, sports and pet-supplies; drugstore and diy hit a robot check and were skipped (yesterday's lists covered the candidates from those two). Product pages read the same run, biggest "bought in past month" first:
+
+- Catsan Hygiene Plus cat litter 20L, B001MZV3OO, £12.00 (was £12.89), 80K+ bought. No high street price checked. Not added.
+- Dr. Beckmann Service-it washing machine cleaner 250g, B0080ZSQKS, £2.00 (RRP £3.49), 50K+ bought, #1 in Home & Kitchen. No high street price found (Superdrug and Currys do not list it). Added as a was/now deal.
+- Medicube Collagen Jelly Cream 110ml, B0CM2PPNMW, £16.80 (RRP £17.90), 40K+ bought. Boots £26.00. Added. Biggest gap of the day (£9.20).
+- Sudafed Blocked Nose Spray 15ml, B004RDYI04, £4.47 (RRP £6.05), 30K+ bought. Superdrug £4.69 (was £5.19). Added.
+- Eylure Dybrow Dark Brown, B000SDQ224, £7.49 (RRP £8.00), 20K+ bought. Superdrug £9.00. Added.
+- Hycosan Extra eye drops 7.5ml, B07PHZCQYB, £12.98, 20K+ bought. Superdrug £12.99. One penny apart, not added.
+- Mr Muscle Drain Unblocker 2 x 1L, B075V3T7ZR, £6.75, 20K+ bought. No RRP shown, no high street price. Not added.
+- Dr. Beckmann Carpet Stain Remover 650ml, B006ZMNWYS, £3.15, 20K+ bought. No RRP shown, no high street price. Not added.
+- Garnier Hair Food Banana 400ml, B07L5WGS2X, £4.00 (RRP £7.99), 10K+ bought. Superdrug 390ml £8.99 (members £4.49). Added.
+- Vitabiotics Ultra Vitamin D3 1000IU 96 tablets, B003VQZC3U, £4.92 (RRP £6.15), 10K+ bought. Superdrug £5.39. Added.
+- Gorilla Super Glue 15g, B003CT4XT0, £5.75 (RRP £10.79), 10K+ bought, #1 in super glue. No high street price readable (B&Q search pages are blocked). Added as a was/now deal.
+- TePe interdental brushes 0.7mm 20 pack, B08Z8N9L1R, £9.90 (RRP £10.95), 9K+ bought. Superdrug only sells a 6 pack (£3.49), so no like for like. Not added.
+- Just For Men Moustache & Beard M45 Dark Brown, B07NBPSNC4, £8.95, 9K+ bought. Superdrug £8.99. Four pence apart, not added.
+- Speedo Biofuse 2.0 goggles, B0BK1Y38RD, £17.99 (RRP £24.50), 7K+ bought. No high street price. Not added.
+- FireAngel FA6813 CO alarm, B0CKWGSX22, £13.98 (RRP £17.99, limited time deal), 5K+ bought. Currys £13.99 (was £16.49). Added.
+- Kidde 5CO CO alarm, B07WSX4NCV, £13.75 (RRP £18.95), 5K+ bought, sold by Safelincs. Wickes and Argos pages give no price. Not added.
+- UniBond AERO 360 refill 4 pack, B01LCHCRQO, £11.50 (RRP £13.15), 5K+ bought. No high street price. Spare.
+- Contigo Byron 470ml, B07TN8SLWP, £9.00 (was £12.50), 5K+ bought. No high street price. Spare.
+- Ring Battery Video Doorbell 2K, B0FHJ91JY5, £79.99, 5K+ bought. Currys £79.99. Same price, not added.
+- Tapo L530B B22 bulb, B08JZHXQC4, £7.99, 4K+ bought. Currys has delisted it and the Argos page gives no price. Not added.
+- Rimmel 60 Seconds Super Shine 740 Clear, B00UYJGYCK, £3.38 (was £3.98), 4K+ bought, sold by AVA SUPPLIES. Superdrug £3.99. Added.
+- Schwarzkopf LIVE 099 Deep Black, B0G35QMQ82, £6.50 (RRP £9.00), 4K+ bought. Superdrug £6.50 (was £8.99). Same price, spare.
+- Clairol Nice'n Easy 4 Dark Brown, B07895R49B, £6.00 (was £6.68), 3K+ bought. Superdrug £7.99 (2 for £12). Added.
+
+VIDEO CANDIDATE (by price gap rather than a Movers & Shakers climb): Medicube Collagen Jelly Cream £16.80 on Amazon vs £26 at Boots, 40K+ bought this month, £9.20 gap. Second choice: Garnier Hair Food Banana £4 vs Superdrug £8.99 (10K+). Both Amazon prices must be re-read on the evening run.
