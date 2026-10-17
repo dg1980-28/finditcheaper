@@ -45,7 +45,18 @@ jobs:
             asins=$(python3 -c "import json;print(json.load(open('video/research/scrape/request.json')).get('asins',''))")
             maxp=$(python3 -c "import json;print(json.load(open('video/research/scrape/request.json')).get('max_products',60))")
             nolists=$(python3 -c "import json;print('--no-lists' if json.load(open('video/research/scrape/request.json')).get('no_lists') else '')")
+            headed=$(python3 -c "import json;print('1' if json.load(open('video/research/scrape/request.json')).get('headed') else '')")
+            channel=$(python3 -c "import json;print(json.load(open('video/research/scrape/request.json')).get('channel',''))")
           fi
+          # "headed": true in request.json runs a visible Chrome window under xvfb, which
+          # Amazon robot checks less than headless mode; "channel": "chrome" uses the
+          # runner's installed Google Chrome.
+          runner=""
+          if [ -n "$headed" ]; then
+            sudo apt-get install -y -qq xvfb >/dev/null 2>&1 || true
+            runner="xvfb-run -a"
+          fi
+          SCRAPE_HEADED="$headed" SCRAPE_CHANNEL="${channel:-chromium}" $runner \
           python3 -u tools/scrape_amazon.py "video/research/scrape/$day.json" \
             --images "video/research/scrape/images" \
             --max-products "${maxp:-60}" --browser --budget-seconds 1500 $nolists \

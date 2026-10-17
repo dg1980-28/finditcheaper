@@ -42,19 +42,42 @@ def is_robot(html):
 
 
 def start_browser():
-    """Headless Chromium with a persistent session: Amazon serves product pages to a
-    real browser far more reliably than to plain requests from a runner IP."""
+    """Chromium with a persistent session: Amazon serves product pages to a real
+    browser far more reliably than to plain requests from a runner IP. Set
+    SCRAPE_HEADED=1 (under xvfb-run) for a headed window, which passes robot checks
+    that the headless modes do not, and SCRAPE_CHANNEL=chrome to use the runner's
+    installed Google Chrome instead of Chrome for Testing."""
     from playwright.sync_api import sync_playwright
     pw = sync_playwright().start()
     args = ["--disable-blink-features=AutomationControlled"]
-    try:  # full Chrome for Testing in new headless mode looks like a normal browser
-        browser = pw.chromium.launch(headless=True, channel="chromium", args=args)
+    headless = os.environ.get("SCRAPE_HEADED") != "1"
+    channel = os.environ.get("SCRAPE_CHANNEL", "chromium")
+    try:  # full Chrome (for Testing) looks like a normal browser
+        browser = pw.chromium.launch(headless=headless, channel=channel, args=args)
     except Exception:
-        browser = pw.chromium.launch(headless=True, args=args)
+        browser = pw.chromium.launch(headless=headless, args=args)
+    print("browser:", channel, "headed" if not headless else "headless", flush=True)
     BROWSER["pw"] = pw
     BROWSER["browser"] = browser
+    BROWSER["location_ok"] = False
+    open_session(4)
+    return BROWSER["page"]
+
+
+def open_session(attempts=4, pause=45):
+    """Open a fresh context (new cookies) on the home page, accept cookies and set
+    the UK delivery address. Used at start and again after a robot check, since a
+    robot checked session tends to stay robot checked."""
+    browser = BROWSER["browser"]
+    old = BROWSER.get("ctx")
+    if old is not None:
+        try:
+            old.close()
+        except Exception:
+            pass
+    BROWSER["location_ok"] = False
     page = None
-    for attempt in range(4):
+    for attempt in range(attempts):
         ctx = browser.new_context(
             user_agent=fetch_image.UA, locale="en-GB", timezone_id="Europe/London",
             viewport={"width": 1366, "height": 900},
@@ -65,13 +88,14 @@ def start_browser():
         ctx.add_cookies([{"name": "i18n-prefs", "value": "GBP", "domain": ".amazon.co.uk", "path": "/"},
                          {"name": "lc-main", "value": "en_GB", "domain": ".amazon.co.uk", "path": "/"}])
         page = ctx.new_page()
+        BROWSER["ctx"] = ctx
         try:
             page.goto(BASE + "/", wait_until="domcontentloaded", timeout=60000)
             time.sleep(2)
             if is_robot(page.content()):
                 print(f"home page is a robot check (attempt {attempt + 1}), new session after a pause", flush=True)
                 ctx.close()
-                time.sleep(45 + 30 * attempt)
+                time.sleep(pause + 30 * attempt)
                 continue
             for sel in ("#sp-cc-accept", "input#sp-cc-accept", "button:has-text('Accept')"):
                 try:
@@ -91,8 +115,14 @@ def start_browser():
             ctx.close()
             time.sleep(30)
     else:
-        BROWSER["location_ok"] = False
-        print("WARNING: UK delivery location not set; prices may be ex VAT or in USD", flush=True)
+        if not BROWSER.get("location_ok"):
+            print("WARNING: UK delivery location not set; prices may be ex VAT or in USD", flush=True)
+        # every attempt closed its context; keep a plain one so product pages still go through the browser
+        ctx = browser.new_context(user_agent=fetch_image.UA, locale="en-GB", timezone_id="Europe/London",
+                                  viewport={"width": 1366, "height": 900})
+        ctx.add_cookies([{"name": "i18n-prefs", "value": "GBP", "domain": ".amazon.co.uk", "path": "/"}])
+        page = ctx.new_page()
+        BROWSER["ctx"] = ctx
     BROWSER["page"] = page
     BROWSER["page_keep"] = page
     return page
@@ -125,9 +155,9 @@ def set_uk_location(page, postcode="SW1A 1AA"):
 
 
 def browser_get(url, tries=2):
-    page = BROWSER["page"]
     last = None
     for i in range(tries):
+        page = BROWSER["page"]
         try:
             page.goto(url, wait_until="domcontentloaded", timeout=60000)
             time.sleep(2.5)
@@ -135,7 +165,9 @@ def browser_get(url, tries=2):
             if is_robot(html):
                 last = "robot"
                 if i + 1 < tries:
-                    time.sleep(15)
+                    # a robot checked session stays robot checked: start a fresh one
+                    time.sleep(20)
+                    open_session(2, pause=30)
                 continue
             if "productTitle" not in html and "/dp/" in url:
                 # sometimes a continue/interstitial page; one more try
