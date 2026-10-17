@@ -63,3 +63,35 @@ Best seller lists loaded for beauty, kitchen, home-garden, lighting, electronics
 - Clairol Nice'n Easy 4 Dark Brown, B07895R49B, £6.00 (was £6.68), 3K+ bought. Superdrug £7.99 (2 for £12). Added.
 
 VIDEO CANDIDATE (by price gap rather than a Movers & Shakers climb): Medicube Collagen Jelly Cream £16.80 on Amazon vs £26 at Boots, 40K+ bought this month, £9.20 gap. Second choice: Garnier Hair Food Banana £4 vs Superdrug £8.99 (10K+). Both Amazon prices must be re-read on the evening run.
+
+## 17 Oct 2026
+
+Checked from the GitHub Actions runner. Scrape Amazon run 9 (05:55 UTC) read the main Movers & Shakers page and the nine category pages with plain requests: eight loaded and listed no products (as on 15 and 16 Oct), beauty and pet-supplies hit a robot check. No climbers recorded, no video candidate from Movers & Shakers today.
+
+Best seller lists loaded for beauty, kitchen, electronics, sports and pet-supplies; drugstore, home-garden, diy and lighting hit robot checks (yesterday's lists covered those). Runs 9 and 10 then hit a robot check on nearly every product page and never got the UK delivery address set, so the few prices they returned were ex VAT and were discarded. Run 11 (07:15 to 07:18 UTC, headed Chrome under xvfb, London delivery address set, prices in GBP) read all 24 requested product pages first time. Biggest "bought in past month" first:
+
+- Medicube PDRN Pink Collagen Jelly Gel Mask 4 pack, B0DGTMR754, £10.00 (RRP £16.90), 80K+ bought, #1 in face treatments and masks, sold by Medicube Official. John Lewis £14.99 (out of stock online). Added. Biggest count of the day.
+- CeraVe Blemish Control Cleanser 236ml, B0B7RQ46LD, £11.60 (no RRP shown), 30K+ bought. Superdrug £14.49. Added.
+- CeraVe AM Facial Moisturising Lotion SPF50 52ml, B09XN22JBT, £12.75 (RRP £16.50), 30K+ bought. Superdrug £16.99. Added. Biggest cash gap of the day (£4.24).
+- La Roche Posay Cicaplast Baume B5+ 100ml, B0BJFLVCZK, £16.91 (RRP £19.50), 30K+ bought. Superdrug £19.89. Added.
+- Acnecide Face Gel 15g, B089QQBDPD, £7.99 (RRP £10.99), 20K+ bought. Superdrug £10.99. Added.
+- NIVEA Double Effect Waterproof Eye Makeup Remover 125ml, B09P1Z8TKZ, £2.00 (RRP £5.49), 20K+ bought. Boots £3.89. Added.
+- Maybelline Lash Sensational mascara 9.5ml, B00PFCSXD4, £5.99 (RRP £9.99), 20K+ bought. Superdrug (Very Black) £9.99. Added.
+- L'Oréal Infallible 3 Second Setting Spray 75ml, B0CNQ4DJRV, £9.34 (RRP £10), 10K+ bought, sold by Beautiquelondon. Superdrug £9.99. 65p gap, spare.
+- Rimmel Stay Matte Pressed Powder Transparent, B004M9L0WW, £3.78 (RRP £4.99), 10K+ bought, sold by Horizon Mark. Superdrug £4.99. Spare.
+- CeraVe Foaming Cleanser 236ml, B07C5SKVL7, £9.37 (RRP £12.50), 10K+ bought. Superdrug £12.49. Added.
+- Nizoral Anti Dandruff Shampoo 100ml, B0DQV8G9HR, £9.74 (RRP £13.99), 10K+ bought. Superdrug £12.99. Added.
+- Revolution Precise Brow Pencil Dark Brown, B07VRLPNY1, £3.87 (RRP £4), 10K+ bought. Superdrug £4.00. 13p gap, not added.
+- Tommee Tippee GroEgg2, B08BD8TFV4, £19.98 (RRP £32.99), 10K+ bought, #1 in children's lighting. Boots out of stock online with no price; Argos and John Lewis pages give no price. Added as a was and now deal.
+- Super Ninja Fruit Fly Traps 2 pack, B0963J155G, £9.99 (no RRP), 60K+ bought. No high street price. Not added.
+- Bloo Power Active rim block 3 pack, B07PLT2N4G, £3.00 (no RRP), 10K+ bought. No high street price. Not added.
+- Hot Hands 5 pairs, B08GCT8SXZ, £3.00 (RRP £4.99), 8K+ bought. No high street price readable. Spare.
+- DURACELL 2032 4 pack, B01CG0TO76, £3.28 (RRP £8), 5K+ bought, sold and dispatched by DORCHESTER NEWS. Currys £8.99. Spare because of the third party seller.
+- UniBond AERO 360 refill 4 pack, B01LCHCRQO, £11.50 (RRP £13.15), 5K+ bought. Spare.
+- Contigo Byron 470ml, B07TN8SLWP, £9.00 (was £12.50), 5K+ bought. Spare.
+- Schwarzkopf LIVE 099 Deep Black, B0G35QMQ82, £6.50 (RRP £9), 4K+ bought. Superdrug £6.50. Same price, not added.
+- Garnier Nutrisse 4.15 Iced Coffee Brown, B006L68VDU, £7.39, 3K+ bought, currently unavailable from the main seller. Not added.
+
+Re-checks: heated throw £25.49 (was £29.99) still a limited time deal, 7K+ bought; Oral-B iO2 Duo £59.98 (RRP £160) still a limited time deal, 3K+; FireAngel FA6813 £13.98 (RRP £17.99) still a limited time deal, 5K+. No deal end times were shown on any page; every "Only N left" line belonged to another item in a carousel, so no low stock notes.
+
+VIDEO CANDIDATE (by price gap rather than a Movers & Shakers climb): Medicube PDRN Pink Collagen Jelly Gel Mask £10 on Amazon vs £14.99 at John Lewis, 80,000 bought this month, £4.99 gap (say "John Lewis lists it at £14.99" rather than "in stock", because it was out of stock online when checked). Second choice: CeraVe AM SPF50 £12.75 vs Superdrug £16.99 (30K+, £4.24 gap). Both Amazon prices must be re-read on the evening run.

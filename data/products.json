@@ -50,6 +50,22 @@
     "dr-beckmann-washing-machine-cleaner",
     "gorilla-super-glue-15g"
    ]
+  },
+  {
+   "date": "2026-10-17",
+   "title": "10 trending UK buys, checked 17 October",
+   "products": [
+    "medicube-pdrn-collagen-gel-mask",
+    "cerave-am-spf50-52ml",
+    "maybelline-lash-sensational-mascara",
+    "acnecide-face-gel-15g",
+    "nizoral-shampoo-100ml",
+    "cerave-foaming-cleanser-236ml",
+    "la-roche-posay-cicaplast-b5-100ml",
+    "cerave-blemish-control-cleanser-236ml",
+    "nivea-double-effect-eye-makeup-remover",
+    "tommee-tippee-groegg2"
+   ]
   }
  ],
  "products": {
@@ -58,15 +74,15 @@
    "short": "Heated throw",
    "image": "heated-throw.jpg",
    "blurb": "The Amazon best seller. Ten heat settings, nine hour timer, machine washable. A heated throw draws roughly 120 to 160 watts, so an evening on the sofa costs a few pence rather than putting the heating on.",
-   "badge": "6K+ bought this month",
-   "checked": "2026-10-16",
+   "badge": "7K+ bought this month",
+   "checked": "2026-10-17",
    "prices": [
     {
      "store": "Amazon",
      "price": 25.49,
      "was": 29.99,
      "asin": "B0D8VHSJWN",
-     "note": "Limited time deal, 15% off, still on 16 October"
+     "note": "Limited time deal, 15% off, still on 17 October"
     },
     {
      "store": "Argos",
@@ -184,14 +200,14 @@
    "image": "oral-b-io2-duo.jpg",
    "blurb": "Two Oral-B iO2 electric toothbrushes in one box, with two heads, a travel case and a refill holder. Pressure sensor, two minute timer and three quiet intensity settings, designed by Braun. Amazon has it on a limited time deal at £59.98 against a £160 RRP, while Boots lists the same Night Black and Calm Pink duo pack at £70 and Argos at £65.",
    "badge": "3K+ bought this month",
-   "checked": "2026-10-16",
+   "checked": "2026-10-17",
    "prices": [
     {
      "store": "Amazon",
      "price": 59.98,
      "was": 160.0,
      "asin": "B0DNG1YCQN",
-     "note": "Limited time deal, 63% off RRP, sold by Amazon, still on 16 October"
+     "note": "Limited time deal, 63% off RRP, sold by Amazon, still on 17 October"
     },
     {
      "store": "Boots",
@@ -610,14 +626,14 @@
    "image": "fireangel-fa6813-co-alarm.jpg",
    "blurb": "A battery powered carbon monoxide alarm with a 10 year sensor, the kind of thing worth having before the boiler goes back on. 5,000 people bought one on Amazon in the past month. Amazon has it on a limited time deal at £13.98 against a £17.99 RRP, and Currys has it at £13.99, down from £16.49, so the two are a penny apart today.",
    "badge": "5K+ bought this month",
-   "checked": "2026-10-16",
+   "checked": "2026-10-17",
    "prices": [
     {
      "store": "Amazon",
      "price": 13.98,
      "was": 17.99,
      "asin": "B0CKWGSX22",
-     "note": "Limited time deal, 22% off RRP, while promotional stock lasts"
+     "note": "Limited time deal, 22% off RRP, still on 17 October"
     },
     {
      "store": "Currys",
@@ -659,6 +675,228 @@
      "was": 10.79,
      "asin": "B003CT4XT0",
      "note": "47% off RRP, #1 best seller in super glue, sold by Amazon"
+    }
+   ]
+  },
+  "medicube-pdrn-collagen-gel-mask": {
+   "name": "Medicube PDRN Pink Collagen Jelly Gel Mask, 4 pack",
+   "short": "Medicube PDRN collagen gel mask",
+   "image": "medicube-pdrn-collagen-gel-mask.jpg",
+   "blurb": "The Korean jelly sheet mask with salmon DNA PDRN and pink collagen, four masks to a box. It is the number one seller in Amazon's face treatments and masks category, and 80,000 people bought a box in the past month. The official Medicube store on Amazon has it at £10 against a £16.90 RRP, while John Lewis lists the same four pack at £14.99 and was out of stock online when checked.",
+   "badge": "80K+ bought this month",
+   "checked": "2026-10-17",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 10.0,
+     "was": 16.9,
+     "asin": "B0DGTMR754",
+     "note": "41% off RRP, #1 best seller in face treatments and masks, sold by Medicube Official and dispatched by Amazon"
+    },
+    {
+     "store": "John Lewis",
+     "price": 14.99,
+     "url": "https://www.johnlewis.com/medicube-pdrn-pink-collagen-gel-mask-x-4/p115763379",
+     "note": "Out of stock online when checked"
+    }
+   ]
+  },
+  "cerave-am-spf50-52ml": {
+   "name": "CeraVe AM Facial Moisturising Lotion SPF50, 52ml",
+   "short": "CeraVe AM SPF50 moisturiser",
+   "image": "cerave-am-spf50-52ml.jpg",
+   "blurb": "The daytime CeraVe moisturiser with three ceramides, niacinamide and SPF50, in the 52ml tube. 30,000 people bought one on Amazon in the past month. Amazon has it at £12.75 against a £16.50 RRP, and Superdrug has the same tube at £16.99, so Amazon is £4.24 cheaper today.",
+   "badge": "30K+ bought this month",
+   "checked": "2026-10-17",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 12.75,
+     "was": 16.5,
+     "asin": "B09XN22JBT",
+     "note": "23% off RRP, sold by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 16.99,
+     "url": "https://www.superdrug.com/skin/face-wash/cerave-am-facial-moisturiser-spf50-normal-to-dry-skin-52ml/p/819338",
+     "note": "Buy one get second half price on selected CeraVe online"
+    }
+   ]
+  },
+  "maybelline-lash-sensational-mascara": {
+   "name": "Maybelline Lash Sensational mascara, Very Black, 9.5ml",
+   "short": "Maybelline Lash Sensational mascara",
+   "image": "maybelline-lash-sensational-mascara.jpg",
+   "blurb": "The original Lash Sensational mascara with the curved fanning brush, in Very Black. 20,000 people bought one on Amazon in the past month. Amazon has it at £5.99 against a £9.99 RRP, and Superdrug sells the same 9.5ml tube at £9.99, so Amazon is £4 cheaper today.",
+   "badge": "20K+ bought this month",
+   "checked": "2026-10-17",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 5.99,
+     "was": 9.99,
+     "asin": "B00PFCSXD4",
+     "note": "40% off RRP, sold by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 9.99,
+     "url": "https://www.superdrug.com/make-up/eye-makeup/mascara/maybelline-lash-sensational-mascara-very-black-95ml/p/348705",
+     "note": "3 for 2 on selected cosmetics"
+    }
+   ]
+  },
+  "acnecide-face-gel-15g": {
+   "name": "Acnecide Face Gel 5% benzoyl peroxide, 15g",
+   "short": "Acnecide Face Gel 15g",
+   "image": "acnecide-face-gel-15g.jpg",
+   "blurb": "The pharmacy spot treatment with 5% benzoyl peroxide, in the 15g tube. 20,000 people bought one on Amazon in the past month. Amazon has it at £7.99 against a £10.99 RRP, and Superdrug has the same 15g tube at £10.99, so Amazon is £3 cheaper today.",
+   "badge": "20K+ bought this month",
+   "checked": "2026-10-17",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 7.99,
+     "was": 10.99,
+     "asin": "B089QQBDPD",
+     "note": "27% off RRP, sold by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 10.99,
+     "url": "https://www.superdrug.com/skin/face-skin-care/anti-blemish-treatments/acnecide-face-gel-spot-treatment-benzoyl-peroxide-15g/p/794526",
+     "note": "Buy one get second half price on selected clear skin products"
+    }
+   ]
+  },
+  "nizoral-shampoo-100ml": {
+   "name": "Nizoral Anti Dandruff Shampoo, 100ml",
+   "short": "Nizoral shampoo 100ml",
+   "image": "nizoral-shampoo-100ml.jpg",
+   "blurb": "The bigger 100ml bottle of the ketoconazole dandruff shampoo, used twice a week for two to four weeks then once a fortnight to keep flakes away. 10,000 people bought one on Amazon in the past month. Amazon has it at £9.74 against a £13.99 RRP, and Superdrug has the same 100ml bottle at £12.99, so Amazon is £3.25 cheaper today.",
+   "badge": "10K+ bought this month",
+   "checked": "2026-10-17",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 9.74,
+     "was": 13.99,
+     "asin": "B0DQV8G9HR",
+     "note": "30% off RRP, sold by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 12.99,
+     "url": "https://superdrug.com/hair/hair-treatments/medicated-hair-treatments/nizoral-anti-dandruff-shampoo-100ml/p/530642",
+     "note": "Pharmacy medicine, questions asked at checkout"
+    }
+   ]
+  },
+  "cerave-foaming-cleanser-236ml": {
+   "name": "CeraVe Foaming Cleanser for normal to oily skin, 236ml",
+   "short": "CeraVe Foaming Cleanser 236ml",
+   "image": "cerave-foaming-cleanser-236ml.jpg",
+   "blurb": "The oily skin partner to the CeraVe Hydrating Cleanser, a foaming gel with niacinamide and three ceramides, in the 236ml pump bottle. 10,000 people bought one on Amazon in the past month. Amazon has it at £9.37 against a £12.50 RRP, and Superdrug has the same 236ml bottle at £12.49, so Amazon is £3.12 cheaper today.",
+   "badge": "10K+ bought this month",
+   "checked": "2026-10-17",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 9.37,
+     "was": 12.5,
+     "asin": "B07C5SKVL7",
+     "note": "25% off RRP, sold by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 12.49,
+     "url": "https://www.superdrug.com/skin/face-wash/cerave-foaming-cleanser-with-niacinamide-for-normal-to-oily-skin-236ml/p/769989",
+     "note": "Buy one get second half price on selected CeraVe online"
+    }
+   ]
+  },
+  "la-roche-posay-cicaplast-b5-100ml": {
+   "name": "La Roche Posay Cicaplast Baume B5+, 100ml",
+   "short": "La Roche Posay Cicaplast B5+",
+   "image": "la-roche-posay-cicaplast-b5-100ml.jpg",
+   "blurb": "The multipurpose repairing balm for dry, irritated or chapped skin, in the big 100ml tube. 30,000 people bought one on Amazon in the past month. Amazon has it at £16.91 against a £19.50 RRP, and Superdrug has the same 100ml tube at £19.89, so Amazon is £2.98 cheaper today.",
+   "badge": "30K+ bought this month",
+   "checked": "2026-10-17",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 16.91,
+     "was": 19.5,
+     "asin": "B0BJFLVCZK",
+     "note": "13% off RRP, sold by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 19.89,
+     "url": "https://www.superdrug.com/Skin/Face-Skin-Care/Expert-Skin/Expert-Sensitive-Skin/La-Roche-Posay-Cicaplast-Baume-B5-Soothing-Repair-Balm-100ml/p/714682"
+    }
+   ]
+  },
+  "cerave-blemish-control-cleanser-236ml": {
+   "name": "CeraVe Blemish Control Cleanser, 236ml",
+   "short": "CeraVe Blemish Control Cleanser",
+   "image": "cerave-blemish-control-cleanser-236ml.jpg",
+   "blurb": "The CeraVe cleanser for blemish prone skin, with 2% salicylic acid, niacinamide and ceramides, in the 236ml bottle. 30,000 people bought one on Amazon in the past month. Amazon has it at £11.60 with no RRP shown, and Superdrug has the same 236ml bottle at £14.49, so Amazon is £2.89 cheaper today.",
+   "badge": "30K+ bought this month",
+   "checked": "2026-10-17",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 11.6,
+     "asin": "B0B7RQ46LD",
+     "note": "No RRP shown, sold by Amazon"
+    },
+    {
+     "store": "Superdrug",
+     "price": 14.49,
+     "url": "https://www.superdrug.com/skin/face-wash/cerave-blemish-control-cleanser-with-salicylic-acid-236ml/p/819340",
+     "note": "Buy one get second half price on selected clear skin products"
+    }
+   ]
+  },
+  "nivea-double-effect-eye-makeup-remover": {
+   "name": "NIVEA Double Effect Waterproof Eye Makeup Remover, 125ml",
+   "short": "NIVEA eye makeup remover",
+   "image": "nivea-double-effect-eye-makeup-remover.jpg",
+   "blurb": "The two phase remover that shifts waterproof mascara without rubbing, in the 125ml bottle. 20,000 people bought one on Amazon in the past month. Amazon has it at £2 against a £5.49 RRP, and Boots has the same bottle at £3.89, so Amazon is £1.89 cheaper today.",
+   "badge": "20K+ bought this month",
+   "checked": "2026-10-17",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 2.0,
+     "was": 5.49,
+     "asin": "B09P1Z8TKZ",
+     "note": "64% off RRP, sold by Amazon"
+    },
+    {
+     "store": "Boots",
+     "price": 3.89,
+     "url": "https://boots.com/nivea/nivea-cleansers-wipes/nivea-double-effect-waterproof-eye-make-up-remover-125ml-10306397",
+     "note": "In stock online"
+    }
+   ]
+  },
+  "tommee-tippee-groegg2": {
+   "name": "Tommee Tippee GroEgg2 room thermometer and night light",
+   "short": "Tommee Tippee GroEgg2",
+   "image": "tommee-tippee-groegg2.jpg",
+   "blurb": "The egg shaped nursery thermometer that glows yellow when the room is the right temperature and changes colour when it is too hot or cold, doubling as a gentle night light. It is the number one seller in children's lighting on Amazon, and 10,000 people bought one in the past month. Amazon has it at £19.98 against a £32.99 RRP; Boots was out of stock online and no other high street price could be read today, so this one is a was and now deal.",
+   "badge": "10K+ bought this month",
+   "checked": "2026-10-17",
+   "prices": [
+    {
+     "store": "Amazon",
+     "price": 19.98,
+     "was": 32.99,
+     "asin": "B08BD8TFV4",
+     "note": "39% off RRP, #1 best seller in children's lighting, sold by Amazon"
     }
    ]
   }
