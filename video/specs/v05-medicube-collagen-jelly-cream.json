@@ -1,0 +1,45 @@
+{
+ "voice": "en-gb-southern_english_female-low",
+ "logo": "video/assets/logo.png",
+ "pad": 0.4,
+ "scenes": [
+  {
+   "type": "hook",
+   "line1": "40,000 people bought this on Amazon this month",
+   "line2": "and Boots wants £9 more for it",
+   "vo": "Forty thousand people bought this on Amazon this month. And Boots wants nine pounds more for it."
+  },
+  {
+   "type": "product",
+   "name": "Medicube Collagen Jelly Cream",
+   "image": "video/assets/medicube-collagen-jelly-cream.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£16.80",
+   "store_alt": "RRP",
+   "price_alt": "£17.90",
+   "badge": "40K+ bought this month",
+   "note": "Amazon's Choice, sold by Medicube Official",
+   "vo": "Medicube's collagen jelly cream, the full one hundred and ten mil tub. Freeze dried collagen and niacinamide, the one all over TikTok for glass skin. Sixteen eighty on Amazon right now, from the official Medicube store."
+  },
+  {
+   "type": "product",
+   "name": "vs Boots",
+   "image": "video/assets/medicube-collagen-jelly-cream.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£16.80",
+   "store_alt": "BOOTS",
+   "price_alt": "£26",
+   "badge": "Same 110ml tub",
+   "note": "£9.20 cheaper on Amazon today",
+   "vo": "Boots has the exact same one hundred and ten mil tub at twenty six pounds. Amazon's sixteen eighty, so that's nine pounds twenty back in your pocket for the same cream."
+  },
+  {
+   "type": "outro",
+   "line1": "Link on the site",
+   "line2": "finditcheaper.co.uk",
+   "small": "Prices checked 18 Oct 2026. Contains affiliate links.",
+   "vo": "Link's at find it cheaper dot co dot UK. Follow for one of these every day."
+  }
+ ],
+ "note": "rendered by the Render video workflow"
+}
