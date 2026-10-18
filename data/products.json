@@ -465,7 +465,7 @@
    "name": "Medicube Collagen Jelly Cream 110ml",
    "short": "Medicube Collagen Jelly Cream",
    "image": "medicube-collagen-jelly-cream.jpg",
-   "blurb": "The viral Korean jelly cream with freeze dried collagen and niacinamide, in the full 110ml tub. 40,000 people bought it on Amazon in the past month, where the official Medicube store has it at £16.80 and Amazon has made it an Amazon's Choice. Boots stocks the same 110ml tub at £26, so Amazon is £9.20 cheaper today.",
+   "blurb": "The viral Korean jelly cream with freeze dried collagen and niacinamide, in the full 110ml tub. 40,000 people bought it on Amazon in the past month, where the official Medicube store has it at £16.80 and Amazon has made it an Amazon's Choice. Boots has cut the same 110ml tub to £18.90, so Amazon is £2.10 cheaper today.",
    "badge": "40K+ bought this month",
    "checked": "2026-10-18",
    "prices": [
@@ -478,9 +478,9 @@
     },
     {
      "store": "Boots",
-     "price": 26.0,
-     "url": "https://boots.com/medicube-collagen-jelly-cream-110ml-10361908",
-     "note": "In stock online, checked 18 October"
+     "price": 18.9,
+     "url": "https://www.boots.com/medicube-collagen-jelly-cream-110ml-10361908",
+     "note": "In stock online, £18.90 on the live Boots page on 18 October (was £26 on 16 October)"
     }
    ]
   },
@@ -686,7 +686,7 @@
    "name": "Medicube PDRN Pink Collagen Jelly Gel Mask, 4 pack",
    "short": "Medicube PDRN collagen gel mask",
    "image": "medicube-pdrn-collagen-gel-mask.jpg",
-   "blurb": "The Korean jelly sheet mask with salmon DNA PDRN and pink collagen, four masks to a box. It is the number one seller in Amazon's face treatments and masks category, and 80,000 people bought a box in the past month. The official Medicube store on Amazon has it at £10 against a £16.90 RRP, while John Lewis lists the same four pack at £14.99 and was out of stock online when checked.",
+   "blurb": "The Korean jelly sheet mask with salmon DNA PDRN and pink collagen, four masks to a box. It is the number one seller in Amazon's face treatments and masks category, and 80,000 people bought a box in the past month. The official Medicube store on Amazon has it at £10 against a £16.90 RRP, while Boots sells the same four pack at £17.90, so Amazon is £7.90 cheaper today.",
    "badge": "80K+ bought this month",
    "checked": "2026-10-18",
    "prices": [
@@ -698,10 +698,17 @@
      "note": "41% off RRP, #1 best seller in face treatments and masks, sold by Medicube Official and dispatched by Amazon"
     },
     {
+     "store": "Boots",
+     "price": 17.9,
+     "url": "https://www.boots.com/medicube-pdm-pink-collagen-gel-masks-28g-4s-10373400",
+     "product": "Medicube PDRN Pink Collagen Gel Masks 28g 4s",
+     "note": "In stock online, checked 18 October"
+    },
+    {
      "store": "John Lewis",
      "price": 14.99,
      "url": "https://www.johnlewis.com/medicube-pdrn-pink-collagen-gel-mask-x-4/p115763379",
-     "note": "Out of stock online when checked. Last checked 17 October"
+     "note": "Out of stock online when last checked 17 October"
     }
    ]
   },

@@ -1,0 +1,45 @@
+{
+ "voice": "en-gb-southern_english_female-low",
+ "logo": "video/assets/logo.png",
+ "pad": 0.4,
+ "scenes": [
+  {
+   "type": "hook",
+   "line1": "80,000 people bought this on Amazon this month",
+   "line2": "and Boots wants £7.90 more for it",
+   "vo": "Eighty thousand people bought this on Amazon this month. And Boots wants seven pounds ninety more for it."
+  },
+  {
+   "type": "product",
+   "name": "Medicube PDRN collagen gel mask",
+   "image": "video/assets/medicube-pdrn-collagen-gel-mask.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£10",
+   "store_alt": "RRP",
+   "price_alt": "£16.90",
+   "badge": "80K+ bought this month",
+   "note": "#1 best seller in face treatments and masks",
+   "vo": "Medicube's pink collagen jelly gel mask, with salmon D N A P D R N. Number one best seller in face treatments and masks. Four masks in the box for ten pounds on Amazon right now, against a sixteen ninety R R P."
+  },
+  {
+   "type": "product",
+   "name": "vs Boots",
+   "image": "video/assets/medicube-pdrn-collagen-gel-mask.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£10",
+   "store_alt": "BOOTS",
+   "price_alt": "£17.90",
+   "badge": "Korean, went viral on TikTok",
+   "note": "Same 4 pack, £7.90 cheaper on Amazon",
+   "vo": "Boots sells the same four pack at seventeen ninety. Amazon's ten pounds, so that's seven ninety back in your pocket for the exact same box."
+  },
+  {
+   "type": "outro",
+   "line1": "Link on the site",
+   "line2": "finditcheaper.co.uk",
+   "small": "Prices checked 18 Oct 2026. Contains affiliate links.",
+   "vo": "Link's at find it cheaper dot co dot UK. Follow for one of these every day."
+  }
+ ],
+ "note": "rendered by the Render video workflow"
+}
