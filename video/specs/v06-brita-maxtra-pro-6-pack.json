@@ -1,0 +1,45 @@
+{
+ "voice": "en-gb-southern_english_female-low",
+ "logo": "video/assets/logo.png",
+ "pad": 0.4,
+ "scenes": [
+  {
+   "type": "hook",
+   "line1": "20,000 people bought this on Amazon this month",
+   "line2": "and Argos wants £11 more for it",
+   "vo": "Twenty thousand people bought this on Amazon this month. And Argos wants eleven pounds more for it."
+  },
+  {
+   "type": "product",
+   "name": "BRITA MAXTRA PRO filters, 6 pack",
+   "image": "video/assets/brita-maxtra-pro-6-pack.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£23.99",
+   "store_alt": "RRP",
+   "price_alt": "£37.49",
+   "badge": "20K+ bought this month",
+   "note": "Six months of filtered water in one box",
+   "vo": "BRITA's MAXTRA PRO Pure Performance cartridges, the six pack, so that's six months of filtered water for any current BRITA jug. Twenty three ninety nine on Amazon right now, against a thirty seven forty nine R R P."
+  },
+  {
+   "type": "product",
+   "name": "vs Argos",
+   "image": "video/assets/brita-maxtra-pro-6-pack.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£23.99",
+   "store_alt": "ARGOS",
+   "price_alt": "£35",
+   "badge": "Sold by Amazon, in stock",
+   "note": "Same 6 pack, £11.01 cheaper on Amazon",
+   "vo": "Argos sells the exact same six pack at thirty five pounds, and Currys is thirty four ninety nine. Amazon's twenty three ninety nine, so that's eleven pounds back in your pocket for the same box of filters."
+  },
+  {
+   "type": "outro",
+   "line1": "Link on the site",
+   "line2": "finditcheaper.co.uk",
+   "small": "Prices checked 23 Oct 2026. Contains affiliate links.",
+   "vo": "Link's at find it cheaper dot co dot UK. Follow for one of these every day."
+  }
+ ],
+ "note": "rendered by the Render video workflow"
+}
