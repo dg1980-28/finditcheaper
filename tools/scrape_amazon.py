@@ -376,6 +376,16 @@ def main(argv):
         old = json.load(open(out))
         res["movers"], res["bestsellers"] = old.get("movers", {}), old.get("bestsellers", {})
         res["lists_from"] = "earlier run today"
+    # Start the browser before the list pages: plain requests for the lists are what
+    # trips Amazon's robot checks first (17 Oct), and a headed Chrome session reads
+    # them as well as the product pages.
+    if use_browser:
+        try:
+            start_browser()
+            print("browser started", flush=True)
+            res["location_ok"] = BROWSER.get("location_ok")
+        except Exception as e:
+            print("browser failed to start, falling back to plain requests:", e, flush=True)
     for c in ([] if no_lists else MOVERS):
         res["movers"][c or "all"] = fetch_list(f"/gp/movers-and-shakers/{c}/" if c else "/gp/movers-and-shakers/")
         print("movers", c or "all", res["movers"][c or "all"]["status"], len(res["movers"][c or "all"]["items"]))
@@ -397,13 +407,6 @@ def main(argv):
                 queue.append(col[row])
     seen = set()
     todo = [a for a in queue if not (a in seen or seen.add(a))][:max_products]
-    if use_browser:
-        try:
-            start_browser()
-            print("browser started", flush=True)
-            res["location_ok"] = BROWSER.get("location_ok")
-        except Exception as e:
-            print("browser failed to start, falling back to plain requests:", e, flush=True)
     def save():
         os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
         with open(out, "w") as f:
