@@ -75,13 +75,13 @@
    "image": "heated-throw.jpg",
    "blurb": "The Amazon best seller. Ten heat settings, nine hour timer, machine washable. A heated throw draws roughly 120 to 160 watts, so an evening on the sofa costs a few pence rather than putting the heating on.",
    "badge": "10K+ bought this month",
-   "checked": "2026-10-23",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
      "price": 29.99,
      "asin": "B0D8VHSJWN",
-     "note": "The £25.49 limited time deal has ended; £29.99 from a third party seller (Warm Home UK) on 23 October"
+     "note": "The £25.49 limited time deal has ended; £29.99 for the dark grey throw from a third party seller (Warm Home UK), #1 best seller in electric bed blankets on 26 October"
     },
     {
      "store": "Argos",
@@ -206,13 +206,13 @@
    "name": "Oral-B iO2 Duo electric toothbrushes (2 handles, Night Black and Calm Pink)",
    "short": "Oral-B iO2 Duo (2 brushes)",
    "image": "oral-b-io2-duo.jpg",
-   "blurb": "Two Oral-B iO2 electric toothbrushes in one box, with two heads, a travel case and a refill holder. Pressure sensor, two minute timer and three quiet intensity settings, designed by Braun. Amazon has it at £79.89 against a £160 RRP now that the £59.98 limited time deal has ended, while Boots listed the same Night Black and Calm Pink duo pack at £70 and Argos at £65 when we last checked them.",
-   "badge": "5K+ bought this month",
-   "checked": "2026-10-23",
+   "blurb": "Two Oral-B iO2 electric toothbrushes in one box, with two heads, a travel case and a refill holder. Pressure sensor, two minute timer and three quiet intensity settings, designed by Braun. Amazon has it at £79.88 against a £160 RRP now that the £59.98 limited time deal has ended, while Boots listed the same Night Black and Calm Pink duo pack at £70 and Argos at £65 when we last checked them.",
+   "badge": "4K+ bought this month",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
-     "price": 79.89,
+     "price": 79.88,
      "was": 160.0,
      "asin": "B0DNG1YCQN",
      "note": "50% off RRP; the £59.98 limited time deal ended before 23 October"
@@ -240,7 +240,7 @@
    "image": "medicube-zero-pore-pads.jpg",
    "blurb": "The number one best seller in Amazon UK's whole beauty category, with 100,000 bought in the past month. Seventy dual textured toner pads with lactic and salicylic acid that you swipe over the face after cleansing to clear pores and smooth texture. Superdrug lists the same 70 pad tub at £17.89.",
    "badge": "100K+ bought this month",
-   "checked": "2026-10-24",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
@@ -272,7 +272,7 @@
    "image": "maybelline-sky-high-mascara.jpg",
    "blurb": "The mascara TikTok made famous, with a flexible bamboo extract wand that lengthens without clumping or flaking. 60,000 people bought it on Amazon in the past month and it is the number one best seller in beauty today. The £7.30 price is from a third party seller, with the tube dispatched by Amazon. Boots and Superdrug both sell the same black 7.2ml tube at £12.99, so Amazon is £5.69 cheaper, close to half price.",
    "badge": "60K+ bought this month",
-   "checked": "2026-10-24",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
@@ -301,16 +301,24 @@
    "name": "Garnier Micellar Cleansing Water, 700ml",
    "short": "Garnier Micellar Water 700ml",
    "image": "garnier-micellar-water-700ml.jpg",
-   "blurb": "The big 700ml bottle of the UK's best selling micellar water, which takes off make up and cleanses without rinsing and suits sensitive skin. 70,000 people bought it on Amazon in the past month. Superdrug has a third off its £9.99 price this week, and Amazon is still a little cheaper.",
+   "blurb": "The big 700ml bottle of the UK's best selling micellar water, which takes off make up and cleanses without rinsing and suits sensitive skin. 70,000 people bought it on Amazon in the past month. Amazon has it at £6 against a £9.99 RRP, Boots has it at £6.50 on offer and Superdrug had it at £6.65 when we last checked, so Amazon is a little cheaper than both.",
    "badge": "70K+ bought this month",
-   "checked": "2026-10-23",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
-     "price": 6.5,
+     "price": 6.0,
      "was": 9.99,
      "asin": "B01M6UUOY2",
-     "note": "35% off RRP, #1 best seller"
+     "note": "40% off RRP, Amazon's Choice, in stock"
+    },
+    {
+     "store": "Boots",
+     "price": 6.5,
+     "was": 9.99,
+     "product": "Garnier Micellar Water Gentle Face Cleanser & Makeup Remover For Sensitive Skin 700ml",
+     "url": "https://www.boots.com/sitesearch?searchTerm=garnier%20micellar%20water%20700ml",
+     "note": "Save £3.49, was £9.99. Checked 26 October"
     },
     {
      "store": "Superdrug",
@@ -352,7 +360,7 @@
    "image": "biodance-collagen-mask.jpg",
    "blurb": "The viral overnight hydrogel mask that goes on cloudy and turns clear as the collagen soaks in over three to four hours. A box of four sheets, and 40,000 people bought it on Amazon in the past month. Superdrug has the same four pack at £14.89.",
    "badge": "40K+ bought this month",
-   "checked": "2026-10-23",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
@@ -376,7 +384,7 @@
    "image": "brita-maxtra-pro-6-pack.jpg",
    "blurb": "Six genuine BRITA MAXTRA PRO Pure Performance cartridges, which is six months of filtered water in any current BRITA jug. 20,000 people bought this pack on Amazon in the past month, where it is £23.99 against a £37.49 RRP. Argos sells the same six pack at £35 and Currys at £34.99, so Amazon is £11.01 cheaper than Argos today.",
    "badge": "20K+ bought this month",
-   "checked": "2026-10-23",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
@@ -513,7 +521,7 @@
    "image": "medicube-collagen-jelly-cream.jpg",
    "blurb": "The viral Korean jelly cream with freeze dried collagen and niacinamide, in the full 110ml tub. 30,000 people bought it on Amazon in the past month, where the official Medicube store has it at £16.80 and Amazon has made it an Amazon's Choice. Boots has cut the same 110ml tub to £18.90, so Amazon is £2.10 cheaper today.",
    "badge": "30K+ bought this month",
-   "checked": "2026-10-24",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
@@ -675,7 +683,7 @@
    "image": "fireangel-fa6813-co-alarm.jpg",
    "blurb": "A battery powered carbon monoxide alarm with a 10 year sensor, the kind of thing worth having before the boiler goes back on. 5,000 people bought one on Amazon in the past month. Amazon has it at £13.98 against a £17.99 RRP, and Currys has it at £13.99, down from £16.49, so the two are a penny apart today.",
    "badge": "5K+ bought this month",
-   "checked": "2026-10-23",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
@@ -699,7 +707,7 @@
    "image": "dr-beckmann-washing-machine-cleaner.jpg",
    "blurb": "The number one seller in Amazon's whole Home & Kitchen category: a single use powder that cleans the drum, seal and pipes of a washing machine. 50,000 people bought one in the past month. Amazon has it at £1.75 against a £3.49 RRP; no high street price could be checked for it, so this one is a was and now deal.",
    "badge": "50K+ bought this month",
-   "checked": "2026-10-24",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
@@ -733,7 +741,7 @@
    "image": "medicube-pdrn-collagen-gel-mask.jpg",
    "blurb": "The Korean jelly sheet mask with salmon DNA PDRN and pink collagen, four masks to a box. It is the number one seller in Amazon's face treatments and masks category, and 80,000 people bought a box in the past month. The official Medicube store on Amazon has it at £10 against a £16.90 RRP, while Boots sells the same four pack at £17.90, so Amazon is £7.90 cheaper today.",
    "badge": "80K+ bought this month",
-   "checked": "2026-10-24",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
@@ -761,16 +769,23 @@
    "name": "CeraVe AM Facial Moisturising Lotion SPF50, 52ml",
    "short": "CeraVe AM SPF50 moisturiser",
    "image": "cerave-am-spf50-52ml.jpg",
-   "blurb": "The daytime CeraVe moisturiser with three ceramides, niacinamide and SPF50, in the 52ml tube. 30,000 people bought one on Amazon in the past month. Amazon has it at £13.99 against a £16.50 RRP, and Superdrug has the same tube at £16.99, so Amazon is £3 cheaper today.",
+   "blurb": "The daytime CeraVe moisturiser with three ceramides, niacinamide and SPF50, in the 52ml tube. 30,000 people bought one on Amazon in the past month and it carries the Amazon's Choice badge. Amazon has it at £12.75 against a £16.50 RRP, sold and dispatched by Amazon. Boots sells the same 52ml tube at £17 and Superdrug had it at £16.99 when we last checked, so Amazon is £4.25 cheaper than Boots today.",
    "badge": "30K+ bought this month",
-   "checked": "2026-10-24",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
-     "price": 13.99,
+     "price": 12.75,
      "was": 16.5,
      "asin": "B09XN22JBT",
-     "note": "15% off RRP, Amazon's Choice, sold by Amazon"
+     "note": "23% off RRP, Amazon's Choice, sold and dispatched by Amazon, in stock"
+    },
+    {
+     "store": "Boots",
+     "price": 17.0,
+     "product": "CeraVe AM Facial Moisturising Lotion SPF50 for Normal to Dry Skin 52ml",
+     "url": "https://www.boots.com/cerave-am-facial-moisturising-lotion-spf-50-for-normal-to-dry-skin-52ml-10311334",
+     "note": "Add to basket available online. Save £12 when you spend £32 on selected CeraVe, online only. Checked 26 October"
     },
     {
      "store": "Superdrug",
@@ -786,7 +801,7 @@
    "image": "maybelline-lash-sensational-mascara.jpg",
    "blurb": "The original Lash Sensational mascara with the curved fanning brush, in Very Black. 20,000 people bought one on Amazon in the past month. Amazon has it at £5.99 against a £9.99 RRP, and Superdrug sells the same 9.5ml tube at £9.99, so Amazon is £4 cheaper today.",
    "badge": "20K+ bought this month",
-   "checked": "2026-10-24",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
@@ -814,16 +829,16 @@
    "name": "Acnecide Face Gel 5% benzoyl peroxide, 15g",
    "short": "Acnecide Face Gel 15g",
    "image": "acnecide-face-gel-15g.jpg",
-   "blurb": "The pharmacy spot treatment with 5% benzoyl peroxide, in the 15g tube. 20,000 people bought one on Amazon in the past month. Amazon has it at £8.70 against a £10.99 RRP, and Superdrug had the same 15g tube at £10.99 when we last checked, so Amazon is £2.29 cheaper.",
+   "blurb": "The pharmacy spot treatment with 5% benzoyl peroxide, in the 15g tube. 20,000 people bought one on Amazon in the past month. Amazon has it at £8.88 against a £10.99 RRP, and Superdrug had the same 15g tube at £10.99 when we last checked, so Amazon is £2.11 cheaper.",
    "badge": "20K+ bought this month",
-   "checked": "2026-10-23",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
-     "price": 8.7,
+     "price": 8.88,
      "was": 10.99,
      "asin": "B089QQBDPD",
-     "note": "21% off RRP, Amazon's Choice, sold by Amazon"
+     "note": "19% off RRP, Amazon's Choice, sold by Amazon"
     },
     {
      "store": "Superdrug",
@@ -837,16 +852,16 @@
    "name": "Nizoral Anti Dandruff Shampoo, 100ml",
    "short": "Nizoral shampoo 100ml",
    "image": "nizoral-shampoo-100ml.jpg",
-   "blurb": "The bigger 100ml bottle of the ketoconazole dandruff shampoo, used twice a week for two to four weeks then once a fortnight to keep flakes away. 10,000 people bought one on Amazon in the past month. Amazon has gone up to £12.99 today against a £13.99 RRP, which matches the Superdrug price when we last checked, so there is no gap at the moment.",
+   "blurb": "The bigger 100ml bottle of the ketoconazole dandruff shampoo, used twice a week for two to four weeks then once a fortnight to keep flakes away. 10,000 people bought one on Amazon in the past month. Amazon has it at £12.49 today against a £13.99 RRP, 50p under the £12.99 Superdrug charged when we last checked.",
    "badge": "10K+ bought this month",
-   "checked": "2026-10-23",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
-     "price": 12.99,
+     "price": 12.49,
      "was": 13.99,
      "asin": "B0DQV8G9HR",
-     "note": "7% off RRP, Amazon's Choice"
+     "note": "11% off RRP, Amazon's Choice"
     },
     {
      "store": "Superdrug",
@@ -883,20 +898,22 @@
    "name": "La Roche Posay Cicaplast Baume B5+, 100ml",
    "short": "La Roche Posay Cicaplast B5+",
    "image": "la-roche-posay-cicaplast-b5-100ml.jpg",
-   "blurb": "The multipurpose repairing balm for dry, irritated or chapped skin, in the big 100ml tube. 30,000 people bought one on Amazon in the past month. Amazon has gone up to £19.89 today, which is the same price Superdrug charged for the 100ml tube when we last checked, so there is no gap at the moment.",
+   "blurb": "The multipurpose repairing balm for dry, irritated or chapped skin, in the big 100ml tube. 30,000 people bought one on Amazon in the past month. Amazon has dropped to £15.92 today against a £19.50 RRP, while Superdrug charged £19.89 for the 100ml tube when we last checked, so Amazon is £3.97 cheaper.",
    "badge": "30K+ bought this month",
-   "checked": "2026-10-23",
+   "checked": "2026-10-26",
    "prices": [
     {
      "store": "Amazon",
-     "price": 19.89,
+     "price": 15.92,
      "asin": "B0BJFLVCZK",
-     "note": "No RRP shown today, Amazon's Choice, sold by Amazon"
+     "note": "18% off RRP, Amazon's Choice, sold by Amazon",
+     "was": 19.5
     },
     {
      "store": "Superdrug",
      "price": 19.89,
-     "url": "https://www.superdrug.com/Skin/Face-Skin-Care/Expert-Skin/Expert-Sensitive-Skin/La-Roche-Posay-Cicaplast-Baume-B5-Soothing-Repair-Balm-100ml/p/714682"
+     "url": "https://www.superdrug.com/Skin/Face-Skin-Care/Expert-Skin/Expert-Sensitive-Skin/La-Roche-Posay-Cicaplast-Baume-B5-Soothing-Repair-Balm-100ml/p/714682",
+     "note": "Last checked 23 October"
     }
    ]
   },
