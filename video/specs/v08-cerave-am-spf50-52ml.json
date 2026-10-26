@@ -1,0 +1,45 @@
+{
+ "voice": "en-gb-southern_english_female-low",
+ "logo": "video/assets/logo.png",
+ "pad": 0.4,
+ "scenes": [
+  {
+   "type": "hook",
+   "line1": "30,000 people bought this moisturiser on Amazon this month",
+   "line2": "and Boots wants £4.25 more for it",
+   "vo": "Thirty thousand people bought this moisturiser on Amazon this month. And Boots wants four pounds twenty five more for it."
+  },
+  {
+   "type": "product",
+   "name": "CeraVe AM SPF50 moisturiser",
+   "image": "video/assets/cerave-am-spf50-52ml.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£12.75",
+   "store_alt": "RRP",
+   "price_alt": "£16.50",
+   "badge": "Amazon's Choice",
+   "note": "Ceramides, niacinamide and SPF50",
+   "vo": "CeraVe A M facial moisturising lotion, the daytime one with three ceramides, niacinamide and S P F fifty. Amazon's Choice, at twelve seventy five against a sixteen fifty R R P, sold and dispatched by Amazon."
+  },
+  {
+   "type": "product",
+   "name": "vs Boots",
+   "image": "video/assets/cerave-am-spf50-52ml.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£12.75",
+   "store_alt": "BOOTS",
+   "price_alt": "£17.00",
+   "badge": "Same 52ml tube",
+   "note": "£4.25 less than Boots today",
+   "vo": "Boots sells the exact same fifty two mil tube at seventeen pounds. On Amazon it's twelve seventy five. That's four pounds twenty five back in your pocket."
+  },
+  {
+   "type": "outro",
+   "line1": "Link on the site",
+   "line2": "finditcheaper.co.uk",
+   "small": "Prices checked 26 Oct 2026. Contains affiliate links.",
+   "vo": "Link's at find it cheaper dot co dot UK. Follow for one of these every day."
+  }
+ ],
+ "note": "rendered by the Render video workflow"
+}
