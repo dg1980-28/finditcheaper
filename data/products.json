@@ -898,22 +898,29 @@
    "name": "La Roche Posay Cicaplast Baume B5+, 100ml",
    "short": "La Roche Posay Cicaplast B5+",
    "image": "la-roche-posay-cicaplast-b5-100ml.jpg",
-   "blurb": "The multipurpose repairing balm for dry, irritated or chapped skin, in the big 100ml tube. 30,000 people bought one on Amazon in the past month. Amazon has dropped to £15.92 today against a £19.50 RRP, while Superdrug charged £19.89 for the 100ml tube when we last checked, so Amazon is £3.97 cheaper.",
+   "blurb": "The multipurpose repairing balm for dry, irritated or chapped skin, in the big 100ml tube. 30,000 people bought one on Amazon in the past month and it carries the Amazon's Choice badge. Amazon has it on a limited time deal at £15.92 against a £19.50 RRP, sold and dispatched by Amazon. Boots sells the same 100ml tube at £19.90 and Superdrug at £19.89, so Amazon is £3.98 cheaper than Boots today.",
    "badge": "30K+ bought this month",
-   "checked": "2026-10-26",
+   "checked": "2026-10-27",
    "prices": [
     {
      "store": "Amazon",
      "price": 15.92,
+     "was": 19.5,
      "asin": "B0BJFLVCZK",
-     "note": "18% off RRP, Amazon's Choice, sold by Amazon",
-     "was": 19.5
+     "note": "Limited time deal, 18% off RRP, Amazon's Choice, sold and dispatched by Amazon, in stock"
+    },
+    {
+     "store": "Boots",
+     "price": 19.9,
+     "product": "La Roche-Posay Cicaplast Baume B5+ Ultra Repairing Soothing Balm 100ml",
+     "url": "https://www.boots.com/la-roche-posay-cicaplast-baume-b5-soothing-repairing-balm-100ml-10149155",
+     "note": "Add to basket available online. Checked 27 October"
     },
     {
      "store": "Superdrug",
      "price": 19.89,
      "url": "https://www.superdrug.com/Skin/Face-Skin-Care/Expert-Skin/Expert-Sensitive-Skin/La-Roche-Posay-Cicaplast-Baume-B5-Soothing-Repair-Balm-100ml/p/714682",
-     "note": "Last checked 23 October"
+     "note": "Add to basket available online. Checked 27 October"
     }
    ]
   },
