@@ -1,0 +1,44 @@
+{
+ "voice": "en-gb-southern_english_female-low",
+ "logo": "video/assets/logo.png",
+ "pad": 0.4,
+ "scenes": [
+  {
+   "type": "hook",
+   "line1": "30,000 people bought this balm on Amazon this month",
+   "line2": "and Boots wants £3.98 more for it",
+   "vo": "Thirty thousand people bought this balm on Amazon this month. And Boots wants nearly four pounds more for it."
+  },
+  {
+   "type": "product",
+   "name": "La Roche Posay Cicaplast Baume B5+",
+   "image": "video/assets/la-roche-posay-cicaplast-b5-100ml.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£15.92",
+   "store_alt": "RRP",
+   "price_alt": "£19.50",
+   "badge": "Limited time deal",
+   "note": "Repair balm for dry, irritated skin",
+   "vo": "La Roche Posay Cicaplast Baume B five plus, the repair balm for dry, irritated or chapped skin, in the big hundred mil tube. It's a limited time deal at fifteen ninety two against a nineteen fifty R R P, sold and dispatched by Amazon."
+  },
+  {
+   "type": "product",
+   "name": "vs Boots",
+   "image": "video/assets/la-roche-posay-cicaplast-b5-100ml.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£15.92",
+   "store_alt": "BOOTS",
+   "price_alt": "£19.90",
+   "badge": "Same 100ml tube",
+   "note": "£3.98 less than Boots today",
+   "vo": "Boots sells the exact same hundred mil tube at nineteen ninety, and Superdrug is nineteen eighty nine. On Amazon it's fifteen ninety two. That's nearly four pounds back in your pocket."
+  },
+  {
+   "type": "outro",
+   "line1": "Link on the site",
+   "line2": "finditcheaper.co.uk",
+   "small": "Prices checked 27 Oct 2026. Contains affiliate links.",
+   "vo": "Link's at find it cheaper dot co dot UK. Follow for one of these every day."
+  }
+ ]
+}
