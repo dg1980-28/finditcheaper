@@ -134,22 +134,30 @@
    "name": "Kärcher WV 1 window vac",
    "short": "Kärcher window vac",
    "image": "karcher.jpg",
-   "blurb": "Condensation season. Run it over the inside of the window in the morning and the water goes into the tank instead of down the wall and into the sealant. 20 minutes per charge, which does a whole house.",
+   "blurb": "Condensation season. Run it over the inside of the window in the morning and the water goes into the tank instead of down the wall and into the sealant. 5,000 people bought one on Amazon in the past month. Amazon has it at £35 against a £44.99 RRP, sold and dispatched by Amazon. Argos sells the same WV 1 at £40 and Currys at £44.99, so Amazon is £5 cheaper than Argos today.",
    "badge": "5K+ bought this month",
-   "checked": "2026-10-24",
+   "checked": "2026-10-28",
    "prices": [
     {
      "store": "Amazon",
-     "price": 34.99,
+     "price": 35.0,
      "was": 44.99,
      "asin": "B0CH3JRYX1",
-     "note": "22% off RRP"
+     "note": "22% off RRP, sold and dispatched by Amazon, in stock"
     },
     {
      "store": "Argos",
      "price": 40.0,
-     "url": "https://www.argos.co.uk/search/karcher-wv1/",
-     "note": "Argos price last checked 11 October"
+     "url": "https://www.argos.co.uk/product/3638699",
+     "product": "Karcher WV 1 Handheld Window Vacuum Cleaner",
+     "note": "Add to trolley available online. Checked 28 October"
+    },
+    {
+     "store": "Currys",
+     "price": 44.99,
+     "url": "https://www.currys.co.uk/products/karcher-wv1-compact-window-vacuum-cleaner-white-10301182.html",
+     "product": "Karcher WV1 Compact Window Vacuum Cleaner",
+     "note": "Checked 28 October"
     }
    ]
   },
@@ -240,14 +248,14 @@
    "image": "medicube-zero-pore-pads.jpg",
    "blurb": "The number one best seller in Amazon UK's whole beauty category, with 100,000 bought in the past month. Seventy dual textured toner pads with lactic and salicylic acid that you swipe over the face after cleansing to clear pores and smooth texture. Superdrug lists the same 70 pad tub at £17.89.",
    "badge": "100K+ bought this month",
-   "checked": "2026-10-26",
+   "checked": "2026-10-28",
    "prices": [
     {
      "store": "Amazon",
      "price": 15.3,
      "was": 16.9,
      "asin": "B09V7Z4TJG",
-     "note": "#1 best seller in beauty, 9% off RRP, sold by Medicube Official"
+     "note": "#1 best seller in face toners, 100K+ bought in past month, 9% off RRP, sold by Medicube Official"
     },
     {
      "store": "Superdrug",
@@ -360,21 +368,29 @@
    "image": "biodance-collagen-mask.jpg",
    "blurb": "The viral overnight hydrogel mask that goes on cloudy and turns clear as the collagen soaks in over three to four hours. A box of four sheets, and 40,000 people bought it on Amazon in the past month. Superdrug has the same four pack at £14.89.",
    "badge": "40K+ bought this month",
-   "checked": "2026-10-26",
+   "checked": "2026-10-28",
    "prices": [
     {
      "store": "Amazon",
      "price": 11.99,
      "was": 14.9,
      "asin": "B0B2RM68G2",
-     "note": "20% off RRP, Amazon's Choice"
+     "note": "20% off RRP, 40K+ bought in past month, dispatched from Amazon"
     },
     {
      "store": "Superdrug",
      "price": 14.89,
      "product": "Biodance Bio Collagen Real Deep Mask 34g 4pk",
      "url": "https://www.superdrug.com/skin/face-skin-care/face-masks/face-masks-sheets/biodance-bio-collagen-real-deep-mask-34g-4pk/p/857128",
-     "note": "Last checked 15 October"
+     "note": "Add to basket available online. Checked 28 October"
+    },
+    {
+     "store": "Boots",
+     "price": 13.41,
+     "was": 14.9,
+     "url": "https://www.boots.com/sitesearch?searchTerm=biodance+collagen+mask",
+     "product": "Biodance Bio Collagen-Real Deep Mask 4 Sheets 34g",
+     "note": "Checked 28 October"
     }
    ]
   },
