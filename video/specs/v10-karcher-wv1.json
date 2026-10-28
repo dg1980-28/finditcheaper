@@ -1,0 +1,44 @@
+{
+ "voice": "en-gb-southern_english_female-low",
+ "logo": "video/assets/logo.png",
+ "pad": 0.4,
+ "scenes": [
+  {
+   "type": "hook",
+   "line1": "5,000 people bought this window vac on Amazon this month",
+   "line2": "and Argos wants £5 more for it",
+   "vo": "Five thousand people bought this window vac on Amazon this month. And Argos wants five pounds more for it."
+  },
+  {
+   "type": "product",
+   "name": "Kärcher WV 1 window vac",
+   "image": "video/assets/karcher.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£35",
+   "store_alt": "RRP",
+   "price_alt": "£44.99",
+   "badge": "5K+ bought this month",
+   "note": "Sucks condensation off the glass",
+   "vo": "The Kärcher W V one. Run it over the inside of the window in the morning and the condensation goes into the tank instead of down the wall. Amazon has it at thirty five pounds against a forty four ninety nine R R P, sold and dispatched by Amazon."
+  },
+  {
+   "type": "product",
+   "name": "vs Argos",
+   "image": "video/assets/karcher.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£35",
+   "store_alt": "ARGOS",
+   "price_alt": "£40",
+   "badge": "Same WV 1",
+   "note": "£5 less than Argos, £10 less than Currys",
+   "vo": "Argos sells the exact same W V one at forty pounds, and Currys is forty four ninety nine. On Amazon it's thirty five. That's a fiver back in your pocket, just as the heating goes on."
+  },
+  {
+   "type": "outro",
+   "line1": "Link on the site",
+   "line2": "finditcheaper.co.uk",
+   "small": "Prices checked 28 Oct 2026. Contains affiliate links.",
+   "vo": "Link's at find it cheaper dot co dot UK. Follow for one of these every day."
+  }
+ ]
+}
