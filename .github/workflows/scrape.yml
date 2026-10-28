@@ -68,4 +68,5 @@ jobs:
           git config user.email "noreply@anthropic.com"
           git add video/research/scrape
           git diff --cached --quiet || git commit -m "Scrape: Amazon lists and product pages $(date -u +%F)"
+          git pull --rebase origin main || true
           git push

@@ -1,11 +1,11 @@
 {
- "date": "2026-10-27",
- "asins": "B00PFCSXD4 B0CM2PPNMW B0B7RQ46LD B07C5SKVL7 B0BJFLVCZK B089QQBDPD B09P1Z8TKZ B07C5R51Q9 B000SDQ224 B001ETUD5I B00JR76TKW B0B18V92KS B07GB2MMK5 B09V7Z4TJG B0B2RM68G2 B01M6UUOY2 B0DNG35BVM B0BSXW7GT9 B0CS62LY6P B0DGPSZVW3 B07CHPWFXK B088W5HWVX B09XN22JBT B08WR5CPNB B0CH3JRYX1 B0GHMZXX8Y B0FMRYXSQG B0C9D4KL9D B07L5WGS2X B07895R49B B00UYJGYCK B004RDYI04 B003VQZC3U B003CT4XT0 B08BD8TFV4",
- "max_products": 40,
- "run": 16,
- "retrigger": 1,
+ "date": "2026-10-28",
+ "asins": "B0B2RM68G2 B09V7Z4TJG B07CHPWFXK B00PFCSXD4 B0CH3JRYX1 B0B7RQ46LD B0CM2PPNMW B09P1Z8TKZ B01M6UUOY2 B07C5R51Q9 B07C5SKVL7 B089QQBDPD B000SDQ224 B001ETUD5I B00JR76TKW B0B18V92KS B07GB2MMK5 B0DNG35BVM B0DGTMR754 B0BJFLVCZK B09XN22JBT B08WR5CPNB B0D8VHSJWN B0DNG1YCQN B0BSXDVQG7 B0CKWGSX22 B0DQV8G9HR B0C9D4KL9D B07L5WGS2X B07895R49B B00UYJGYCK B004RDYI04 B003VQZC3U B003CT4XT0 B08BD8TFV4 B0080ZSQKS B0DGPSZVW3 B01LCHCRQO B000IU40HQ B07WSX4NCV",
+ "max_products": 42,
+ "run": 17,
+ "retrigger": 0,
  "no_lists": false,
  "headed": true,
  "channel": "chrome",
- "note": "27 Oct video run: same day prices for the unposted candidates (Lash Sensational Very Black, Collagen Jelly Cream, CeraVe Blemish Control, Foaming and Hydrating cleansers, Cicaplast, Acnecide, NIVEA eye makeup remover, Eylure, Nizoral 60ml, Eraser, Vitality Pro, Lumie, Zero Pore, BIODANCE, Micellar, iO2 single), five unknown beauty and drugstore best sellers from 26 Oct (B0BSXW7GT9 B0CS62LY6P B0DGPSZVW3 B07CHPWFXK B088W5HWVX), the two latest videos, and the 11 products last checked 24 Oct, then today's best seller lists for new climbers."
+ "note": "28 Oct video run: same day prices for the unposted candidates (BIODANCE, Zero Pore, CeraVe 454g cream, Lash Sensational Very Black, Karcher WV1, CeraVe Blemish Control, Collagen Jelly Cream, NIVEA, Micellar, CeraVe cleansers, Acnecide, Eylure, Nizoral 60ml, Eraser, Vitality Pro, Lumie, iO2 single), the posted products, the products last checked 24 Oct, three household best sellers (UniBond Aero 360 refill, HG mould remover, Kidde CO alarm), then today's best seller lists. Run 16 on 27 Oct read everything but its push was rejected because the sandbox pushed in between; the workflow now pulls before pushing."
 }
