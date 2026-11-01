@@ -1,11 +1,11 @@
 {
- "date": "2026-10-28",
- "asins": "B0B2RM68G2 B09V7Z4TJG B07CHPWFXK B00PFCSXD4 B0CH3JRYX1 B0B7RQ46LD B0CM2PPNMW B09P1Z8TKZ B01M6UUOY2 B07C5R51Q9 B07C5SKVL7 B089QQBDPD B000SDQ224 B001ETUD5I B00JR76TKW B0B18V92KS B07GB2MMK5 B0DNG35BVM B0DGTMR754 B0BJFLVCZK B09XN22JBT B08WR5CPNB B0D8VHSJWN B0DNG1YCQN B0BSXDVQG7 B0CKWGSX22 B0DQV8G9HR B0C9D4KL9D B07L5WGS2X B07895R49B B00UYJGYCK B004RDYI04 B003VQZC3U B003CT4XT0 B08BD8TFV4 B0080ZSQKS B0DGPSZVW3 B01LCHCRQO B000IU40HQ B07WSX4NCV",
+ "date": "2026-11-01",
+ "asins": "B07GB2MMK5 B07L5WGS2X B00PFCSXD4 B0B7RQ46LD B0DNG35BVM B0B18V92KS B09V7Z4TJG B0B2RM68G2 B09P1Z8TKZ B000SDQ224 B0C9VVCL12 B08BD8TFV4 B003CT4XT0 B01LCHCRQO B07WSX4NCV B0080ZSQKS B07CHPWFXK B0D8VHSJWN B0CH3JRYX1 B0GHMZXX8Y B0DNG1YCQN B08WR5CPNB B01M6UUOY2 B07C5R51Q9 B0BSXDVQG7 B00JR76TKW B001ETUD5I B0C9D4KL9D B0CM2PPNMW B07895R49B B00UYJGYCK B004RDYI04 B003VQZC3U B0CKWGSX22 B0DGTMR754 B09XN22JBT B089QQBDPD B0DQV8G9HR B07C5SKVL7 B0BJFLVCZK",
  "max_products": 42,
- "run": 17,
+ "run": 18,
  "retrigger": 0,
  "no_lists": false,
  "headed": true,
  "channel": "chrome",
- "note": "28 Oct video run: same day prices for the unposted candidates (BIODANCE, Zero Pore, CeraVe 454g cream, Lash Sensational Very Black, Karcher WV1, CeraVe Blemish Control, Collagen Jelly Cream, NIVEA, Micellar, CeraVe cleansers, Acnecide, Eylure, Nizoral 60ml, Eraser, Vitality Pro, Lumie, iO2 single), the posted products, the products last checked 24 Oct, three household best sellers (UniBond Aero 360 refill, HG mould remover, Kidde CO alarm), then today's best seller lists. Run 16 on 27 Oct read everything but its push was rejected because the sandbox pushed in between; the workflow now pulls before pushing."
+ "note": "1 Nov video run: same day prices for the unposted candidates first (Lumie, Garnier Hair Food, Lash Sensational, CeraVe Blemish Control, iO2 single, Vitality Pro, Zero Pore, BIODANCE, NIVEA, Eylure, magnesium, GroEgg2, Gorilla, UniBond, Kidde, Dr Beckmann, CeraVe 454g), then every other product on the site, then today's best seller lists."
 }
