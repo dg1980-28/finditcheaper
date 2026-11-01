@@ -30,11 +30,11 @@ Edit `data/products.json`:
 - `products.<slug>`: `name`, `short`, `image` (file in `assets/products/`, 600px square jpg, from the Amazon listing's SL800 image), `blurb` (2 to 3 plain sentences, British English, no dashes), `badge` ("40K+ bought this month"), `checked` (ISO date), `prices` (list of `{store, price, was?, asin|url, product?, note?}`). Cheapest row is highlighted automatically.
 - Copy the image to `video/assets/<slug>.jpg` as well for the video.
 - Optionally add a `weeks[]` entry for a roundup; single-product videos don't need one.
-Then `python3 tools/build_site.py`, commit, push. Check `https://finditcheaper.co.uk/products/<slug>/` loads after the deploy.
+Then `python3 tools/build_site.py`, commit, push. Check `https://finditcheaper.co.uk/products/<slug>/` loads after the deploy. The build writes the headline ("<short> is £5 cheaper at Amazon than Argos", or "drops to £X, 22% off" when there is only a was price) as both the title and the H1, puts every price in the first paragraph, and emits schema.org Product/AggregateOffer JSON-LD from the `prices` list, so keep `short` singular and readable and keep `was` filled in whenever Amazon shows one: the headline and the percentage come from them.
 
 ## 3. Render the video
 Write `video/specs/vNN-<slug>.json` using `video/specs/v03-medicube.json` as the template:
-- `hook`: two lines, the number first ("40,000 people bought this on Amazon this month") then the price angle.
+- `hook`: two lines, the number first ("40,000 people bought this on Amazon this month") then the price angle. Rotate the hook style across the week so the account is not ten identical openers in a row; the hooks that rank in TikTok search for "uk deals" and "amazon finds uk" (scan of 1 Nov, `video/research/competitors.md`) are: (a) the count hook above; (b) the first person regret hook, "I paid £40 for this at Argos. Amazon has it for £35." or "Nobody told me Boots charges £5 more for the same mascara"; (c) the dated deal hook, "Amazon deals, 3 November" or "Boots vs Amazon, 3 November", which is how the account that owns the "uk deals" search opens every single video; (d) "lowest price in 30 days" or "ends tomorrow" when Amazon shows it (the NationalWorld piece that ranks first for Medicube pads uses exactly "lowest Amazon price in 30 days, but the deal ends tomorrow"). Every claim in the hook must still be something that was checked that day.
 - Two `product` scenes: the product with `store_main`/`price_main` and `store_alt`/`price_alt` (WAS price, then the competitor). `badge` is the social proof, `note` one short fact.
 - `outro`: "Link on the site" / "finditcheaper.co.uk", `small` = "Prices checked D Mon YYYY. Contains affiliate links."
 - `vo` lines are what piper reads. Write numbers as words ("sixteen ninety"), spell out initialisms with spaces ("P D R N"). Keep total length 25 to 35 seconds; `pad` 0.4.
@@ -49,8 +49,8 @@ Either way, pull four frames with ffmpeg and look at them before shipping (text 
 
 ## 4. Captions
 Write `video/research/vNN-caption.md`:
-- TikTok (max 2 lines of text then tags): hook sentence, prices, "Link on finditcheaper.co.uk. Contains affiliate links." Hashtags: 5 or 6, product-specific plus `#amazonfindsuk #ukdeals #finditcheaper`.
-- YouTube title: "<Product>: £X on Amazon vs £Y at <Store>". Description: 3 sentences, the product page URL, "Prices checked <date>. As an Amazon Associate, Find It Cheaper earns from qualifying purchases."
+- TikTok (max 2 lines of text then tags): hook sentence, prices, "Link on finditcheaper.co.uk. Contains affiliate links." The first line is what TikTok search shows as the result title, so it carries the store, the product and the number ("Kärcher window vac £35 on Amazon vs £40 at Argos, 1 November"), not a tease. Hashtags: 5 or 6, product-specific plus `#amazonfindsuk #ukdeals #finditcheaper`.
+- YouTube title: "<Product>: £X on Amazon vs £Y at <Store>". When Amazon shows a percentage off the RRP, add it: "<Product>: £X on Amazon vs £Y at <Store> (22% off)"; the newspaper and TechRadar pieces that rank for the product searches all carry the percentage in the headline. Description: 3 sentences, the product page URL, "Prices checked <date>. As an Amazon Associate, Find It Cheaper earns from qualifying purchases."
 
 ## 5. Deliver and upload
 1. Copy the mp4 to the owner's Downloads as `finditcheaper-vNN-<slug>.mp4` (`device_commit_files` from `/mnt/user-data/outputs/`, or `device_bash` copy). If the PC isn't reachable, send the file in chat instead and say so.

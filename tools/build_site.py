@@ -121,6 +121,57 @@ def build_week(week, depth):
     return f"<h1>{esc(week['title'])}</h1>{vid}<div class=\"list\">{rows}</div>"
 
 
+def headline(prod):
+    """Newspaper-style headline with the number in it: '<Product> is £5 cheaper at Amazon than Argos'.
+
+    Local newspaper 'recommended' pieces and TechRadar rank for '<product> cheapest price uk' with the
+    saving in the headline; price comparison sites rank with '£X at <Store>' lists. Both patterns are here.
+    """
+    best = best_price(prod)
+    others = [p for p in prod["prices"] if p is not best]
+    if others:
+        dearest = max(others, key=lambda p: p["price"])
+        gap = dearest["price"] - best["price"]
+        if gap >= 1:
+            verb = "are" if prod["short"].endswith("s") and not prod["short"].endswith("ss") else "is"
+            return f"{prod['short']} {verb} {gbp(gap)} cheaper at {best['store']} than {dearest['store']}"
+    if best.get("was") and best["was"] > best["price"]:
+        pct = round((best["was"] - best["price"]) / best["was"] * 100)
+        return f"{prod['short']} drops to {gbp(best['price'])} at {best['store']}, {pct}% off"
+    return f"{prod['short']}: cheapest price in the UK"
+
+
+def summary_line(prod):
+    """First paragraph with every price in it, the way the ranking deal pages do it."""
+    best = best_price(prod)
+    parts = [f"{best['store']} {gbp(best['price'])}"]
+    if best.get("was") and best["was"] > best["price"]:
+        pct = round((best["was"] - best["price"]) / best["was"] * 100)
+        parts[0] += f", down from {gbp(best['was'])} ({pct}% off)"
+    for p in sorted((p for p in prod["prices"] if p is not best), key=lambda p: p["price"]):
+        parts.append(f"{p['store']} {gbp(p['price'])}")
+    return ". ".join(parts) + "."
+
+
+def product_jsonld(slug, prod):
+    """schema.org Product with an AggregateOffer across every retailer, so Google can show the price range."""
+    best = best_price(prod)
+    offers = [{
+        "@type": "Offer", "price": f"{p['price']:.2f}", "priceCurrency": "GBP", "url": store_url(p),
+        "availability": "https://schema.org/InStock", "seller": {"@type": "Organization", "name": p["store"]},
+    } for p in sorted(prod["prices"], key=lambda p: p["price"])]
+    data = {
+        "@context": "https://schema.org", "@type": "Product", "name": prod["name"],
+        "image": f"https://{SITE['domain']}/assets/products/{prod['image']}", "description": prod["blurb"],
+        "url": f"https://{SITE['domain']}/products/{slug}/",
+        "offers": {
+            "@type": "AggregateOffer", "priceCurrency": "GBP", "lowPrice": f"{best['price']:.2f}",
+            "highPrice": f"{max(p['price'] for p in prod['prices']):.2f}", "offerCount": len(offers), "offers": offers,
+        },
+    }
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False) + "</script>"
+
+
 def product_page(slug, prod):
     best = best_price(prod)
     rows = []
@@ -132,29 +183,24 @@ def product_page(slug, prod):
         note = f'<div class="tag">{esc(p["note"])}</div>' if p.get("note") else ""
         rows.append(f'<tr class="{"best" if is_best else ""}"><td>{label}{sub}</td><td class="p">{gbp(p["price"])}{was}{note}</td><td><a class="btn{"" if is_best else " alt"}" href="{store_url(p)}" rel="sponsored nofollow">Go to {label}</a></td></tr>')
     table = "\n".join(rows)
+    title = headline(prod)
     body = f"""
-<h1>{esc(prod['name'])}</h1>
-<p class="meta">Prices checked {nice_date(prod['checked'])}</p>
+<h1>{esc(title)}</h1>
+<p class="meta">{esc(prod['name'])} · Prices checked {nice_date(prod['checked'])}</p>
 <div class="hero">
   <img src="../../assets/products/{prod['image']}" alt="{esc(prod['name'])}" width="600" height="600">
   <div>
     <span class="pill">{esc(prod.get('badge',''))}</span>
+    <p><strong>{esc(summary_line(prod))}</strong></p>
     <p class="lede">{esc(prod['blurb'])}</p>
     <p><strong>Cheapest right now: {esc(best['store'])}, {gbp(best['price'])}</strong></p>
   </div>
 </div>
 <h2>Price comparison</h2>
 <div class="tablewrap"><table><thead><tr><th>Retailer</th><th>Price</th><th></th></tr></thead><tbody>{table}</tbody></table></div>
+{product_jsonld(slug, prod)}
 """
-    # Newspaper-style title with the number in it when there is a real gap
-    stores = [p for p in prod["prices"] if p is not best]
-    if stores:
-        dearest = max(stores, key=lambda p: p["price"])
-        gap = dearest["price"] - best["price"]
-        title = f"{prod['short']} is £{gap:.2f}".replace(".00", "") + f" cheaper at {best['store']} than {dearest['store']}" if gap >= 1 else f"{prod['short']}: cheapest price in the UK"
-    else:
-        title = f"{prod['short']}: cheapest price in the UK"
-    desc = f"{prod['name']} compared at {', '.join(sorted(set(p['store'] for p in prod['prices'])))}. Cheapest is {best['store']} at {gbp(best['price'])}, checked {nice_date(prod['checked'])}."
+    desc = f"{summary_line(prod)} {prod['name']} compared at {', '.join(sorted(set(p['store'] for p in prod['prices'])))}, prices checked {nice_date(prod['checked'])}."
     return page(title, body, desc, 2, f"products/{slug}/")
 
 
