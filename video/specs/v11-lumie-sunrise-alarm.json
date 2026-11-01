@@ -1,0 +1,44 @@
+{
+ "voice": "en-gb-southern_english_female-low",
+ "logo": "video/assets/logo.png",
+ "pad": 0.4,
+ "scenes": [
+  {
+   "type": "hook",
+   "line1": "6,000 people bought this sunrise alarm on Amazon this month",
+   "line2": "and Argos wants £15 more for it",
+   "vo": "Six thousand people bought this sunrise alarm on Amazon this month. And Argos wants fifteen pounds more for it."
+  },
+  {
+   "type": "product",
+   "name": "Lumie Sunrise Alarm",
+   "image": "video/assets/lumie.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£33.99",
+   "store_alt": "RRP",
+   "price_alt": "£49.99",
+   "badge": "6K+ bought this month",
+   "note": "Limited time deal, 32% off",
+   "vo": "The Lumie Sunrise Alarm. It brightens slowly for half an hour before the alarm, so you wake up in daylight now the clocks have gone back. Amazon has it at thirty three ninety nine on a limited time deal, against a forty nine ninety nine R R P."
+  },
+  {
+   "type": "product",
+   "name": "vs Argos",
+   "image": "video/assets/lumie.jpg",
+   "store_main": "AMAZON",
+   "price_main": "£33.99",
+   "store_alt": "ARGOS",
+   "price_alt": "£49",
+   "badge": "Same Lumie Sunrise Alarm",
+   "note": "£15 less than Argos, £6 less than Boots",
+   "vo": "Argos sells the exact same one at forty nine pounds, and Boots is thirty nine ninety nine. On Amazon it's thirty three ninety nine. That's fifteen pounds back in your pocket."
+  },
+  {
+   "type": "outro",
+   "line1": "Link on the site",
+   "line2": "finditcheaper.co.uk",
+   "small": "Prices checked 1 Nov 2026. Contains affiliate links.",
+   "vo": "Link's at find it cheaper dot co dot UK. Follow for one of these every day."
+  }
+ ]
+}
